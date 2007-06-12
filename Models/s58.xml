@@ -132,9 +132,9 @@
   <object-name>rotortail</object-name>
   <property>rotors/tail/blade[0]/position-deg</property>
    <center>
-     <x-m> 8.984 </x-m>
-     <y-m> 0.431 </y-m>
-     <z-m> 2.046 </z-m>
+     <x-m>  8.984 </x-m>
+     <y-m> -0.431 </y-m>
+     <z-m>  2.046 </z-m>
    </center>
    <axis>
      <x>  0.000 </x>

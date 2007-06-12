@@ -26,11 +26,11 @@ Some useful keys:
 
 Thanks
 ======
-Maik JUSTUS and Heiko SCHULZ for FDM
+Maik JUSTUS, Thomas REAGAN and Heiko SCHULZ for FDM
 
 ===============
 BARANGER Emmanuel
-May, 22, 2007. 
+June, 12, 2007. 
 
 http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr
@@ -63,11 +63,11 @@ Quelques touches utiles :
 
 Remerciements
 =============
-Maik JUSTUS et Heiko SCHULZ pour le modèle de vol.
+Maik JUSTUS Thomas REAGAN et Heiko SCHULZ pour le modèle de vol.
 
 ===============
 BARANGER Emmanuel
-22 Mai 2007.
+12 Juin 2007.
 
 http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr

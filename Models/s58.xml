@@ -46,7 +46,17 @@
     <object-name>tubeD7</object-name>
   </animation>
 
-<!-- Pilote invisible depuis le cockpit -->
+  <!-- Planches de bord -->
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -3.566 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  1.246 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilote invisible depuis le cockpit -->
   <animation>
     <type>select</type>
     <object-name>pilot</object-name>

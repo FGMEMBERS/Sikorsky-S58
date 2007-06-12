@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <object-name>panel</object-name>
+    <object-name>cachepanel</object-name>
+    <object-name>boite</object-name>
+    <object-name>boite2</object-name>
+  </animation>
+
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> 0.455 </x-m>
+      <y-m> 0.388 </y-m>
+      <z-m> 0.113 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.455 </x-m>
+      <y-m> -0.388 </y-m>
+      <z-m>  0.113 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Panel/Instruments/hsi/hsi.xml</path>
+    <offsets>
+      <x-m> 0.395 </x-m>
+      <y-m> 0.525 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> -6.110 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Panel/Instruments/altimeter/altimeter.xml</path>
+    <offsets>
+      <x-m> 0.389 </x-m>
+      <y-m> 0.251 </y-m>
+      <z-m> 0.092 </z-m>
+      <pitch-deg> -6.033 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Panel/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m> 0.388 </x-m>
+      <y-m> 0.590 </y-m>
+      <z-m> 0.100 </z-m>
+      <pitch-deg> -5.891 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Panel/Instruments/speed/speed.xml</path>
+    <offsets>
+      <x-m> 0.379 </x-m>
+      <y-m> 0.251 </y-m>
+      <z-m> 0.177 </z-m>
+      <pitch-deg> -6.873 </pitch-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

@@ -14,7 +14,7 @@
 
 <!-- rotor data below that is indented further is known good data -->
 
-<rotor name="main" x="-3.2" y="0.0" z="2.74" nx="0.05" ny="0" nz="1." fx="1" fy="0" fz="0" ccw="1"
+<rotor name="main" x="-4.59" y="0.0" z="2.74" nx="0.05" ny="0" nz="1." fx="1" fy="0" fz="0" ccw="1"
   maxcollective="10.8" mincollective="0.2"
   mincyclicele="-3"  maxcyclicele="8"
   mincyclicail="-2" maxcyclicail="2.5"
@@ -69,7 +69,7 @@
   <control-input axis="/controls/flight/elevator" control="CYCLICELE"
                  src0="-1.0" src1="1.0"
                  dst0="-1.0" dst1="1.0"/>
-  <control-input axis="/controls/engines/engine[0]/throttle" control="COLLECTIVE" 
+  <control-input axis="/controls/engines/engine[0]/throttle" control="COLLECTIVE"
                  src0="0.0" src1="1.0"
                  dst0="1.0" dst1="-1.0"/>
 </rotor>
@@ -78,7 +78,7 @@
 
 <!-- rotor data below that is indented further is known good data -->
 
-<rotor name="tail" x="-10.5" y="0.031" z="2.45" nx="0.07" ny="-1" nz="-0.05" fx="1" fy="0" fz="0" ccw="1"
+<rotor name="tail" x="-12.18" y="0.031" z="2.07" nx="0.07" ny="-1" nz="-0.05" fx="1" fy="0" fz="0" ccw="1"
   maxcollective="12" mincollective="-5"
   
   	diameter="2.89" 
@@ -133,40 +133,44 @@
 </rotorgear>
 
 
-	<cockpit x="-1.88" y=".33" z="0.6"/>
+	<cockpit x="-2.5" y="-0.33" z="0.6"/>
 
-	<fuselage ax="0" ay="0" az="0" bx="-5.10" by="0" bz="0"
-			  width="1.92" taper="0.95" midpoint="0.5"/>
+      <!-- Nose to cockpit -->
+	<fuselage ax="1.58" ay="0" az="0.12" bx="-0.38" by="0" bz="0.6"
+			  width="1.33" taper="0.95" midpoint="0.95"/>
 
-	<fuselage ax="-5.10" ay="0" az=".70" bx="-11.27" by="0" bz=".70"
+      <!-- cockpit to main fuselage -->
+	<fuselage ax="-0.38" ay="0" az=".60" bx="-4.71" by="0" bz=".36"
+			  width="0.47" taper="0.99" midpoint="0.95"/>
+
+      <!-- tail boom -->
+	<fuselage ax="-4.71" ay="0" az="0.36" bx="-9.96" by="0" bz=".0"
 			  width="0.47" taper="0.9" midpoint="0.05"/>
 
 
-	<vstab x="-9.4" y="0" z="1.148" taper=".5" length="2.5" chord="1.38" sweep="45" incidence="5">
+	<vstab x="-10.00" y="0" z="1.148" taper=".5" length="2.5" chord="1.38" sweep="45" incidence="5">
 		<stall aoa="16" width="4" peak="1.5"/>
 	</vstab>
 
 
-	<hstab x="-9.4" y="0.0" z="1.01" taper="1.0" effectiveness="0.5" length="1.27" chord="0.52" sweep="0">
+	<hstab x="-10.00" y="0.0" z="1.01" taper="1.0" effectiveness="0.5" length="1.27" chord="0.52" sweep="0">
 		<stall aoa="0" width="0" peak="1.5"/>
 	</hstab>
   
 <!-- left gear -->
-<gear x="-1.2" y="1.98" z="-1.30" compression="0.25" spring="2.2" damp="1.0" sfric=".3" dfric=".2">
+<gear x="-0.74" y="1.98" z="-1.30" compression="0.25" spring="2.2" damp="1.0" sfric=".3" dfric=".2">
   <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
 </gear>
 
 	<!-- right gear -->
-<gear x="-1.2" y="-1.98" z="-1.30" compression="0.25" spring="2.2" damp="1.0" sfric=".3" dfric=".2">
+<gear x="-0.74" y="-1.98" z="-1.30" compression="0.25" spring="2.2" damp="1.0" sfric=".3" dfric=".2">
   <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
 </gear>
 
-
-
 	<!-- tail gear -->
-<gear x="-9" y="0" z="-1.27" compression="0.1" spring="3" damp="1.0" sfric="0.8" dfric="0.6">
+<gear x="-9.45" y="0" z="-1.27" compression="0.1" spring="3" damp="1.0" sfric="2.0" dfric="0.6">
   <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
   <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
@@ -177,29 +181,29 @@
 
 
 
-	<tank x="-3.39" y="+0.7" z="-.31" capacity="75"/>
-	<tank x="-3.47" y="-0.7" z="-.31" capacity="75"/>
-	<tank x="-3.8" y="-0.5" z="0" capacity="75"/>
+	<tank x="-1.50" y="+0.7" z="-.31" capacity="75"/>
+	<tank x="-1.50" y="-0.7" z="-.31" capacity="75"/>
+
 	<!-- work around bug in native-fdm.cxx:184 -->
 	<tank x="0" y="0" z="0" capacity="0"/>
 
-	<ballast x="-3.7" y="+0.0" z="-1.0" mass="150"/>
-	<ballast x="-2.5" y="-0.8" z="-1.0" mass="150"/>
-	<ballast x="-1.0" y="+0.0" z="-0.5" mass="600"/>
-	<ballast x="-2.5" y="+0.8" z="-1.0" mass="150"/>
-	<ballast x="-3.0" y="+0.0" z="-1.0" mass="150"/>
+	<ballast x="-5.7" y="+0.0" z="-1.0" mass="750"/>
+	<ballast x="-4.2" y="-0.8" z="-1.0" mass="900"/>
+	<ballast x="-2.7" y="+0.0" z="-0.5" mass="1600"/>
+	<ballast x="-4.2" y="+0.8" z="-1.0" mass="900"/>
+	<ballast x="-4.7" y="+0.0" z="-1.0" mass="900"/>
 
-	<ballast x="-3.0" y="+0.0" z="-0.5" mass="300"/>
+	<ballast x="-10.2" y="+0.0" z="-0.5" mass="925"/>
 
-	<weight x="-1.0" y=".33"  z="-.5" mass-prop="/sim/weight[0]/weight-lb"/>
+	<weight x="-1.4" y=".33"  z="-.5" mass-prop="/sim/weight[0]/weight-lb"/>
 	<!-- pilot -->
-	<weight x="-1.0" y="-.33" z="-.5" mass-prop="/sim/weight[1]/weight-lb"/>
+	<weight x="-1.4" y="-.33" z="-.5" mass-prop="/sim/weight[1]/weight-lb"/>
 	<!-- co-pilot -->
-	<weight x="-3.2" y=".33"  z="-.5" mass-prop="/sim/weight[2]/weight-lb"/>
+	<weight x="-3.42" y=".33"  z="-.5" mass-prop="/sim/weight[2]/weight-lb"/>
 	<!-- right passenger -->
-	<weight x="-2.0" y="-.33" z="-.5" mass-prop="/sim/weight[4]/weight-lb"/>
+	<weight x="-3.42" y="-.33" z="-.5" mass-prop="/sim/weight[4]/weight-lb"/>
 	<!-- left passenger -->
-	<weight x="-4.0" y="0"    z="-.5" mass-prop="/sim/weight[5]/weight-lb"/>
+	<weight x="-4.24" y="0"    z="-.5" mass-prop="/sim/weight[5]/weight-lb"/>
 	<!-- patient/load -->
 
 </airplane>

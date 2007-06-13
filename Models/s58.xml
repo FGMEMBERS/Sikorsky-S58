@@ -30,6 +30,7 @@
     <object-name>axe3</object-name>
     <object-name>axe4</object-name>
     <object-name>rotortail</object-name>
+    <object-name>moyeux</object-name>
     <object-name>tubeG1</object-name>
     <object-name>tubeG2</object-name>
     <object-name>tubeG3</object-name>
@@ -44,7 +45,26 @@
     <object-name>tubeD5</object-name>
     <object-name>tubeD6</object-name>
     <object-name>tubeD7</object-name>
+    <object-name>fond</object-name>
+    <object-name>hstab</object-name>
+    <object-name>echappement</object-name>
+    <!-- Transparence -->
+    <object-name>vitre</object-name>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+    <object-name>propblurtail</object-name>
+    <object-name>propdisctail</object-name>
   </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+    <object-name>propblurtail</object-name>
+    <object-name>propdisctail</object-name>
+  </animation>
+
 
   <!-- Planches de bord -->
   <model>
@@ -68,79 +88,259 @@
     </condition>
   </animation>
 
-<!-- Rotation du rotor -->
-<animation>
-  <type>rotate</type>
-  <object-name>rotorup</object-name>
-  <property>rotors/main/roll-deg</property>
-  <axis>
-    <x> 1.000 </x>
-    <y> 0.000 </y>
-    <z> 0.000 </z>
-  </axis>
-   <center>
-     <x-m> -1.371 </x-m>
-     <y-m>  0.000 </y-m>
-     <z-m>  2.895 </z-m>
-   </center>
-</animation>
+  <!-- Sélection Pâles/blur  rotor parincipal -->
+  <animation>
+    <type>select</type>
+    <object-name>propdisc</object-name>
+    <condition>
+      <greater-than>
+        <property>rotors/main/rpm</property>
+        <value>150</value>
+      </greater-than>
+    </condition>
+  </animation>
 
-<animation>
-  <type>rotate</type>
-  <object-name>rotorup</object-name>
-  <object-name>pale1</object-name>
-  <object-name>pale2</object-name>
-  <object-name>pale3</object-name>
-  <object-name>pale4</object-name>
-  <property>rotors/main/yaw-deg</property>
-  <axis>
-    <x> 0.000 </x>
-    <y>-1.000 </y>
-    <z> 0.000 </z>
-  </axis>
-   <center>
-     <x-m> -1.371 </x-m>
-     <y-m>  0.000 </y-m>
-     <z-m>  2.895 </z-m>
-   </center>
-</animation>
+  <animation>
+    <type>select</type>
+    <object-name>propblur</object-name>
+    <condition>
+    <and>
+      <greater-than>
+        <property>rotors/main/rpm</property>
+        <value>60</value>
+      </greater-than>
+      <less-than>
+        <property>rotors/main/rpm</property>
+        <value>150.001</value>
+      </less-than>
+    </and>
+    </condition>
+  </animation>
 
-<animation>
-  <type>rotate</type>
-  <object-name>rotorup</object-name>
-  <object-name>rotor</object-name>
-  <object-name>pale1</object-name>
-  <object-name>pale2</object-name>
-  <object-name>pale3</object-name>
-  <object-name>pale4</object-name>
-  <property>rotors/main/blade[0]/position-deg</property>
-   <center>
-     <x-m> -1.371 </x-m>
-     <y-m>  0.000 </y-m>
-     <z-m>  2.895 </z-m>
-   </center>
-   <axis>
-     <x>  0.000 </x>
-     <y>  0.000 </y>
-     <z>  1.000 </z>
-   </axis>
-</animation>
+  <animation>
+    <type>select</type>
+    <object-name>pale1</object-name>
+    <object-name>pale2</object-name>
+    <object-name>pale3</object-name>
+    <object-name>pale4</object-name>
+    <condition>
+      <less-than>
+        <property>rotors/main/rpm</property>
+	<value>150</value>
+      </less-than>
+    </condition>
+  </animation>
 
-<!-- Rotation du rotor de queue -->
-<animation>
-  <type>rotate</type>
-  <object-name>rotortail</object-name>
-  <property>rotors/tail/blade[0]/position-deg</property>
-   <center>
-     <x-m>  8.984 </x-m>
-     <y-m> -0.431 </y-m>
-     <z-m>  2.046 </z-m>
-   </center>
-   <axis>
-     <x>  0.000 </x>
-     <y> -1.000 </y>
-     <z>  0.000 </z>
-   </axis>
-</animation>
+  <!-- Rotation du rotor -->
+  <animation>
+    <type>rotate</type>
+    <object-name>rotorup</object-name>
+    <object-name>pale1</object-name>
+    <object-name>pale2</object-name>
+    <object-name>pale3</object-name>
+    <object-name>pale4</object-name>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+    <property>rotors/main/roll-deg</property>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+     <center>
+       <x-m> -1.371 </x-m>
+       <y-m>  0.000 </y-m>
+       <z-m>  2.895 </z-m>
+     </center>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rotorup</object-name>
+    <object-name>pale1</object-name>
+    <object-name>pale2</object-name>
+    <object-name>pale3</object-name>
+    <object-name>pale4</object-name>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+    <property>rotors/main/yaw-deg</property>
+    <axis>
+      <x> 0.000 </x>
+      <y>-1.000 </y>
+      <z> 0.000 </z>
+    </axis>
+     <center>
+       <x-m> -1.371 </x-m>
+       <y-m>  0.000 </y-m>
+       <z-m>  2.895 </z-m>
+     </center>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rotorup</object-name>
+    <object-name>rotor</object-name>
+    <object-name>pale1</object-name>
+    <object-name>pale2</object-name>
+    <object-name>pale3</object-name>
+    <object-name>pale4</object-name>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+    <property>rotors/main/blade[0]/position-deg</property>
+     <center>
+       <x-m> -1.371 </x-m>
+       <y-m>  0.000 </y-m>
+       <z-m>  2.895 </z-m>
+     </center>
+     <axis>
+       <x>  0.000 </x>
+       <y>  0.000 </y>
+       <z>  1.000 </z>
+     </axis>
+  </animation>
+
+  <!-- Sélection Pâles/blur  rotor de queue -->
+  <animation>
+    <type>select</type>
+    <object-name>propdisctail</object-name>
+    <condition>
+      <greater-than>
+        <property>rotors/tail/rpm</property>
+        <value>150</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblurtail</object-name>
+    <condition>
+    <and>
+      <greater-than>
+        <property>rotors/tail/rpm</property>
+        <value>60</value>
+      </greater-than>
+      <less-than>
+        <property>rotors/tail/rpm</property>
+        <value>150.001</value>
+      </less-than>
+    </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>rotortail</object-name>
+    <condition>
+      <less-than>
+        <property>rotors/tail/rpm</property>
+	<value>150</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <!-- Rotation du rotor de queue -->
+  <animation>
+    <type>rotate</type>
+    <object-name>rotortail</object-name>
+    <object-name>moyeux</object-name>
+    <object-name>propblurtail</object-name>
+    <object-name>propdisctail</object-name>
+    <property>rotors/tail/blade[0]/position-deg</property>
+     <center>
+       <x-m>  8.984 </x-m>
+       <y-m> -0.431 </y-m>
+       <z-m>  2.046 </z-m>
+     </center>
+     <axis>
+       <x>  0.000 </x>
+       <y> -1.000 </y>
+       <z>  0.000 </z>
+     </axis>
+  </animation>
+
+  <!-- Compresssion -->
+  <animation>
+    <type>rotate</type>
+    <object-name>roueG</object-name>
+    <object-name>tubeG1</object-name>
+    <object-name>tubeG2</object-name>
+    <object-name>tubeG3</object-name>
+    <object-name>tubeG4</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <interpolation>
+      <entry>
+        <ind>  0.0 </ind>
+        <dep> -4.0 </dep>
+      </entry>
+      <entry>
+        <ind>  1.0 </ind>
+        <dep> 10.0 </dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m> -2.602 </x-m>
+      <y-m> -0.811 </y-m>
+      <z-m> -0.597 </z-m>
+    </center>
+    <axis>
+      <x> -1.000 </x>
+      <y>  0.000 </y>
+      <z>  0.000 </z>
+    </axis>
+  </animation>
+
+  <!-- Compresssion -->
+  <animation>
+    <type>rotate</type>
+    <object-name>roueD</object-name>
+    <object-name>tubeD1</object-name>
+    <object-name>tubeD2</object-name>
+    <object-name>tubeD3</object-name>
+    <object-name>tubeD4</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry>
+        <ind>  0.0 </ind>
+        <dep> -4.0 </dep>
+      </entry>
+      <entry>
+        <ind>  1.0 </ind>
+        <dep> 10.0 </dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m> -2.602 </x-m>
+      <y-m>  0.811 </y-m>
+      <z-m> -0.597 </z-m>
+    </center>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>roueA</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <interpolation>
+      <entry>
+        <ind>  0.0 </ind>
+        <dep> -0.1 </dep>
+      </entry>
+      <entry>
+        <ind> 1.000 </ind>
+        <dep> 0.300 </dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x> 0.000 </x>
+      <y> 0.000 </y>
+      <z> 1.000 </z>
+    </axis>
+  </animation>
 
 </PropertyList>
+

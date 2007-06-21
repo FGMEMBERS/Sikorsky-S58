@@ -45,15 +45,18 @@
     <object-name>tubeD5</object-name>
     <object-name>tubeD6</object-name>
     <object-name>tubeD7</object-name>
+    <object-name>tubeA</object-name>
     <object-name>fond</object-name>
     <object-name>hstab</object-name>
     <object-name>echappement</object-name>
+    <object-name>tourgrille</object-name>
     <!-- Transparence -->
     <object-name>vitre</object-name>
     <object-name>propblur</object-name>
     <object-name>propdisc</object-name>
     <object-name>propblurtail</object-name>
     <object-name>propdisctail</object-name>
+    <object-name>grille</object-name>
   </animation>
 
   <animation>
@@ -322,23 +325,29 @@
   </animation>
 
   <animation>
-    <type>translate</type>
+    <type>rotate</type>
     <object-name>roueA</object-name>
+    <object-name>tubeA</object-name>
     <property>gear/gear[2]/compression-norm</property>
     <interpolation>
       <entry>
         <ind>  0.0 </ind>
-        <dep> -0.1 </dep>
+        <dep> -4.0 </dep>
       </entry>
       <entry>
-        <ind> 1.000 </ind>
-        <dep> 0.300 </dep>
+        <ind>  1.0 </ind>
+        <dep> 10.0 </dep>
       </entry>
     </interpolation>
+    <center>
+      <x-m>  5.345 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.655 </z-m>
+    </center>
     <axis>
-      <x> 0.000 </x>
-      <y> 0.000 </y>
-      <z> 1.000 </z>
+      <x>  0.000 </x>
+      <y> -1.000 </y>
+      <z>  0.000 </z>
     </axis>
   </animation>
 

@@ -7,10 +7,10 @@
 			<mode>once</mode>
 			<path>Aircraft/Sikorsky-S58/Sounds/s58_engine_start_accel5.wav</path>
 			<condition>
-					<greater-than>
-						<property>sim/model/s58/state</property>
-						<value>0</value>
-					</greater-than>
+				<greater-than>
+					<property>sim/model/s58/state</property>
+					<value>0</value>
+				</greater-than>
 			</condition>
 			<volume>
 				<factor>0.7</factor>
@@ -25,7 +25,7 @@
 		<rotor>
 			<name>rotor</name>
 			<mode>looped</mode>
-			<path>Aircraft/Sikorsky-S58/Sounds/Sikorsky-S-58-engn1.wav</path>
+			<path>Aircraft/Sikorsky-S58/Sounds/s58_rotor_loop_outside5.wav</path>
 			<condition>
 				<and>
 					<greater-than>
@@ -43,7 +43,7 @@
 					</not>
 				</and>
 			</condition>
-			<volume> 
+			<volume>
 				<property>rotors/gear/torque-sound-filtered</property>
 			</volume>
 			<pitch>
@@ -52,6 +52,106 @@
 				<offset>-0.0</offset>
 				<max>2.5</max>
 			</pitch>
+			<position>
+				<x> -1.3 </x>
+				<y> 0 </y>
+				<z> 3 </z>
+			</position>
+		</rotor>
+
+		<rotor>
+			<name>tail_rotor</name>
+			<mode>looped</mode>
+			<path>Aircraft/Sikorsky-S58/Sounds/s58_tail_rotor_loop_outside.wav</path>
+			<condition>
+				<and>
+					<greater-than>
+						<property>rotors/main/rpm</property>
+						<value>50</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+					<not>
+						<equals>
+							<property>sim/current-view/view-number</property>
+							<value>0</value>
+						</equals>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>rotors/gear/torque-sound-filtered</property>
+				<factor>0.75</factor>
+			</volume>
+			<pitch>
+				<property>rotors/tail/rpm</property>
+				<factor>0.0023</factor>
+				<offset>-0.0</offset>
+				<max>2.5</max>
+			</pitch>
+			<position>
+				<x> 9 </x>
+				<y> -0.4 </y>
+				<z> 2 </z>
+			</position>
+			<orientation>
+				<x> 1 </x>
+				<y> -.2 </y>
+				<z> 0 </z>
+				<inner-angle>50</inner-angle>
+				<outer-angle>100</outer-angle>
+				<outer-gain>0.1</outer-gain>
+			</orientation>
+		</rotor>
+
+		<rotor>
+			<name>engine</name>
+			<mode>looped</mode>
+			<path>Aircraft/Sikorsky-S58/Sounds/s58_engine_loop_outside.wav</path>
+			<condition>
+				<and>
+					<greater-than>
+						<property>rotors/main/rpm</property>
+						<value>50</value>
+					</greater-than>
+					<greater-than>
+						<property>sim/model/s58/state</property>
+						<value>1</value>
+					</greater-than>
+					<not>
+						<property>sim/crashed</property>
+					</not>
+					<not>
+						<equals>
+							<property>sim/current-view/view-number</property>
+							<value>0</value>
+						</equals>
+					</not>
+				</and>
+			</condition>
+			<volume>
+				<property>rotors/gear/torque-sound-filtered</property>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.004255</factor>
+				<offset>-0.0</offset>
+				<max>2.5</max>
+			</pitch>
+			<position>
+				<x> 0 </x>
+				<y> -1 </y>
+				<z> 0 </z>
+			</position>
+			<orientation>
+				<x> -.1 </x>
+				<y> -1 </y>
+				<z> -.2 </z>
+				<inner-angle>50</inner-angle>
+				<outer-angle>100</outer-angle>
+				<outer-gain>0.2</outer-gain>
+			</orientation>
 		</rotor>
 
 		<rotor>
@@ -82,12 +182,13 @@
 				<offset>-0.0</offset>
 				<max>2.5</max>
 			</pitch>
+
 		</rotor>
 
 		<rotor>
 			<name>stall</name>
 			<mode>looped</mode>
-			<path>Aircraft/Sikorsky-S58/Sounds/Sikorsky-S-58-prop1.wav</path>
+			<path>Aircraft/Sikorsky-S58/Sounds/s58_rotor_flap_loop_outside.wav</path>
 			<condition>
 				<and>
 					<greater-than>
@@ -110,7 +211,7 @@
 				<offset>0</offset>
 				<max>2.5</max>
 			</pitch>
-		</rotor>-->
+		</rotor>
 
 		<overspeed>
 			<name>overspeed</name>

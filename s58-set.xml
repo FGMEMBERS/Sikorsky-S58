@@ -34,6 +34,7 @@ S58 simulation config.
 			<path archive="y">Aircraft/Sikorsky-S58/Models/s58.xml</path>
 			<s58>
 				<state type="int">0</state>
+				<engine type="float">0.0</engine>
 				<rotor-step-deg type="float">-1.0</rotor-step-deg>
 			</s58>
 		</model>
@@ -45,7 +46,7 @@ S58 simulation config.
 				<!--right-->
 				<y-offset-m archive="y">  1.948 </y-offset-m>
 				<!--up-->
-				<z-offset-m archive="y">  0.821 </z-offset-m>
+				<z-offset-m archive="y">  2.191 </z-offset-m>
 				<!--back-->
 				<!-- <pitch-offset-deg>-8</pitch-offset-deg> -->
 			</config>
@@ -53,37 +54,37 @@ S58 simulation config.
 
 		<view n="1">
 			<config>
-				<target-z-offset-m archive="y" type="double">3.2</target-z-offset-m>
+				<target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
 			</config>
 		</view>
 
 		<view n="2">
 			<config>
-				<target-z-offset-m archive="y" type="double">3.2</target-z-offset-m>
+				<target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
 			</config>
 		</view>
 
 		<view n="3">
 			<config>
-				<target-z-offset-m archive="y" type="double">3.2</target-z-offset-m>
+				<target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
 			</config>
 		</view>
 
 		<view n="4">
 			<config>
-				<target-z-offset-m archive="y" type="double">3.2</target-z-offset-m>
+				<target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
 			</config>
 		</view>
 
 		<view n="5">
 			<config>
-				<target-z-offset-m archive="y" type="double">3.2</target-z-offset-m>
+				<target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
 			</config>
 		</view>
 
 		<view n="6">
 			<config>
-				<target-z-offset-m archive="y" type="double">3.2</target-z-offset-m>
+				<target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
 			</config>
 		</view>
 
@@ -140,6 +141,10 @@ S58 simulation config.
 		<gear>
 			<brake-parking>1</brake-parking>
 		</gear>
+		<rotor>
+			<reltarget>1</reltarget>
+			<maxreltorque>1</maxreltorque>
+		</rotor>
 	</controls>
 
 	<instrumentation>

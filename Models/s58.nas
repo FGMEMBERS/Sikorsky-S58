@@ -56,6 +56,7 @@ settimer(nav_light_loop, 0);
 
 # engines/rotor =====================================================
 var state = props.globals.getNode("sim/model/s58/state");
+var engine = props.globals.getNode("sim/model/s58/engine");
 var rotor = props.globals.getNode("controls/engines/engine/magnetos");
 var rotor_rpm = props.globals.getNode("rotors/main/rpm");
 var torque = props.globals.getNode("rotors/gear/total-torque", 1);
@@ -65,8 +66,8 @@ var torque_pct = props.globals.getNode("sim/model/s58/torque-pct", 1);
 var stall = props.globals.getNode("rotors/main/stall", 1);
 var stall_filtered = props.globals.getNode("rotors/main/stall-filtered", 1);
 var torque_sound_filtered = props.globals.getNode("rotors/gear/torque-sound-filtered", 1);
-var target_rel_rpm = props.globals.getNode("rotors/gear/target-rel-rpm", 1);
-var max_rel_torque = props.globals.getNode("rotors/gear/max-rel-torque", 1);
+var target_rel_rpm = props.globals.getNode("controls/rotor/reltarget", 1);
+var max_rel_torque = props.globals.getNode("controls/rotor/maxreltorque", 1);
 
 
 # 0 off
@@ -84,33 +85,39 @@ var update_state = func {
 		state.setValue(new_state);
 		if (new_state == (1)) {
 			settimer(func { update_state(2) }, 2);
+			interpolate(engine, 0.03, 0.1, 0.002, 0.3, 0.02, 0.1, 0.003, 0.7, 0.03, 0.1, 0.01, 0.7);
 		} else {
 			if (new_state == (2)) {
 				settimer(func { update_state(3) }, 3);
 				rotor.setValue(1);
 				max_rel_torque.setValue(0.01);
 				target_rel_rpm.setValue(0.002);
+				interpolate(engine, 0.05, 0.2, 0.03, 1, 0.07, 0.1, 0.04, 0.9, 0.02, 0.5);
 			} else { 
 				if (new_state == (3)) {
 					if (rotor_rpm.getValue() > 100) {
 						#rotor is running at high rpm, so accel. engine faster
 						max_rel_torque.setValue(1);
-						target_rel_rpm.setValue(1);
+						target_rel_rpm.setValue(1.03);
 						state.setValue(5);
+						interpolate(engine, 1.03, 10);
 					} else {
 						settimer(func { update_state(4) }, 7);
 						max_rel_torque.setValue(0.05);
 						target_rel_rpm.setValue(0.02);
+						interpolate(engine, 0.07, 0.1, 0.03, 0.25, 0.075, 0.2, 0.08, 1, 0.06,2);
 					}
 				} else {
 					if (new_state == (4)) {
 						settimer(func { update_state(5) }, 30);
 						max_rel_torque.setValue(0.25);
 						target_rel_rpm.setValue(0.8);
+						interpolate(engine, 0.83, 20);
 					} else {
 							if (new_state == (5)) {
 							max_rel_torque.setValue(1);
-							target_rel_rpm.setValue(1);
+							target_rel_rpm.setValue(1.03);
+							interpolate(engine, 1.03, 6);
 						}
 					}
 				}
@@ -129,6 +136,7 @@ var engines = func {
 	} else {
 		rotor.setValue(0);				# engines stopped
 		state.setValue(0);
+		interpolate(engine, 0, 4);
 	}
 }
 

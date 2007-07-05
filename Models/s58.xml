@@ -4,7 +4,7 @@
 
   <path>s58.ac</path>
   <offsets>
-     <x-m>3.2</x-m>
+     <x-m>4.57</x-m>
      <z-m>0.1</z-m>
      <pitch-deg>0</pitch-deg>
   </offsets>
@@ -270,7 +270,7 @@
     <object-name>tubeG2</object-name>
     <object-name>tubeG3</object-name>
     <object-name>tubeG4</object-name>
-    <property>gear/gear[0]/compression-norm</property>
+    <property>gear/gear[0]/compression-m</property>
     <interpolation>
       <entry>
         <ind>  0.0 </ind>
@@ -278,7 +278,7 @@
       </entry>
       <entry>
         <ind>  1.0 </ind>
-        <dep> 10.0 </dep>
+        <dep> 45.0 </dep>
       </entry>
     </interpolation>
     <center>
@@ -301,7 +301,7 @@
     <object-name>tubeD2</object-name>
     <object-name>tubeD3</object-name>
     <object-name>tubeD4</object-name>
-    <property>gear/gear[1]/compression-norm</property>
+    <property>gear/gear[1]/compression-m</property>
     <interpolation>
       <entry>
         <ind>  0.0 </ind>
@@ -309,7 +309,7 @@
       </entry>
       <entry>
         <ind>  1.0 </ind>
-        <dep> 10.0 </dep>
+        <dep> 45.0 </dep>
       </entry>
     </interpolation>
     <center>
@@ -328,7 +328,7 @@
     <type>rotate</type>
     <object-name>roueA</object-name>
     <object-name>tubeA</object-name>
-    <property>gear/gear[2]/compression-norm</property>
+    <property>gear/gear[2]/compression-m</property>
     <interpolation>
       <entry>
         <ind>  0.0 </ind>
@@ -336,7 +336,7 @@
       </entry>
       <entry>
         <ind>  1.0 </ind>
-        <dep> 10.0 </dep>
+        <dep> 70.0 </dep>
       </entry>
     </interpolation>
     <center>

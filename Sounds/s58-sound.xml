@@ -137,7 +137,7 @@
 				<property>rotors/main/rpm</property>
 				<factor>0.004255</factor>
 				<offset>-0.0</offset>
-				<max>2.5</max>
+				<max>1.03</max>
 			</pitch>
 			<position>
 				<x> 0 </x>
@@ -266,16 +266,9 @@
 				</and>
 			</condition>
 			<volume>
-				<property>position/altitude-ft</property>
-				<factor>-0.000015</factor>
-				<offset>1.0</offset>
-				<min>0.1</min>
-				<max>1.0</max>
-			</volume>
-			<volume>
 				<property>velocities/airspeed-kt</property>
 				<factor>0.0015</factor>
-				<min>0.03</min>
+				<min>0.00</min>
 				<max>0.25</max>
 			</volume>
 			<pitch>

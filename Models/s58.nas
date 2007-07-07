@@ -112,12 +112,10 @@ var update_state = func {
 						settimer(func { update_state(5) }, 30);
 						max_rel_torque.setValue(0.25);
 						target_rel_rpm.setValue(0.8);
-						interpolate(engine, 0.83, 20);
 					} else {
 							if (new_state == (5)) {
 							max_rel_torque.setValue(1);
 							target_rel_rpm.setValue(1.03);
-							interpolate(engine, 1.03, 6);
 						}
 					}
 				}
@@ -140,7 +138,12 @@ var engines = func {
 	}
 }
 
-
+var update_engine = func {
+	if (state.getValue() > 3 ) {
+		interpolate (engine,  clamp( rotor_rpm.getValue() / 235 ,
+								0.05, target_rel_rpm.getValue() ), 0.25 );
+	}
+}
 
 # torquemeter
 var torque_val = 0;
@@ -388,6 +391,7 @@ var main_loop = func {
 	update_stall(dt);
 	update_torque_sound_filtered(dt);
 	update_slide();
+	update_engine();
 	settimer(main_loop, 0);
 }
 

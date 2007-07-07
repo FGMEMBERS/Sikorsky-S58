@@ -5,12 +5,11 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>TurbineNeedle</object-name>
-		<property>sim/model/ec135/turbine-rpm-pct</property>
+		<property>sim/model/s58/engine</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>35</dep></entry>
-			<entry><ind>50</ind><dep>151</dep></entry>
-			<entry><ind>100</ind><dep>267</dep></entry>
-			<entry><ind>140</ind><dep>360</dep></entry>
+			<entry><ind>1.0</ind><dep>267</dep></entry>
+			<entry><ind>1.4</ind><dep>360</dep></entry>
 		</interpolation>
 		<axis>
 			<x>-1</x>
@@ -22,9 +21,9 @@
 		<property>rotors/main/rpm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>35</dep></entry>
-			<entry><ind>221</ind><dep>151</dep></entry>
-			<entry><ind>442</ind><dep>267</dep></entry>
-			<entry><ind>619</ind><dep>360</dep></entry>
+			<entry><ind>117</ind><dep>151</dep></entry>
+			<entry><ind>235</ind><dep>267</dep></entry>
+			<entry><ind>329</ind><dep>360</dep></entry>
 		</interpolation>
 		<axis>
 			<x>-1</x>

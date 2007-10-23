@@ -30,7 +30,7 @@ Maik JUSTUS, Thomas REAGAN and Heiko SCHULZ for FDM
 
 ===============
 BARANGER Emmanuel
-June, 12, 2007. 
+October, 23, 2007. 
 
 http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr
@@ -67,7 +67,7 @@ Maik JUSTUS Thomas REAGAN et Heiko SCHULZ pour le modèle de vol.
 
 ===============
 BARANGER Emmanuel
-12 Juin 2007.
+23 Octobre 2007.
 
 http://helijah.free.fr/flightgear/hangar.htm
 embaranger@free.fr

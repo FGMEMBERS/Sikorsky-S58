@@ -19,16 +19,6 @@
     <object-name>roueG</object-name>
     <object-name>roueD</object-name>
     <object-name>roueA</object-name>
-    <object-name>rotorup</object-name>
-    <object-name>rotor</object-name>
-    <object-name>pale1</object-name>
-    <object-name>pale2</object-name>
-    <object-name>pale3</object-name>
-    <object-name>pale4</object-name>
-    <object-name>axe1</object-name>
-    <object-name>axe2</object-name>
-    <object-name>axe3</object-name>
-    <object-name>axe4</object-name>
     <object-name>rotortail</object-name>
     <object-name>moyeux</object-name>
     <object-name>tubeG1</object-name>
@@ -52,8 +42,6 @@
     <object-name>tourgrille</object-name>
     <!-- Transparence -->
     <object-name>vitre</object-name>
-    <object-name>propblur</object-name>
-    <object-name>propdisc</object-name>
     <object-name>propblurtail</object-name>
     <object-name>propdisctail</object-name>
     <object-name>grille</object-name>
@@ -62,12 +50,19 @@
   <animation>
     <type>noshadow</type>
     <object-name>vitre</object-name>
-    <object-name>propblur</object-name>
-    <object-name>propdisc</object-name>
     <object-name>propblurtail</object-name>
     <object-name>propdisctail</object-name>
   </animation>
 
+  <!-- Rotor principale -->
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/MainRotor/mainrotor.xml</path>
+    <offsets>
+      <x-m> -1.367 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  2.870 </z-m>
+    </offsets>
+  </model>
 
   <!-- Planches de bord -->
   <model>
@@ -89,117 +84,6 @@
         <value>0</value>
       </greater-than>
     </condition>
-  </animation>
-
-  <!-- Sélection Pâles/blur  rotor parincipal -->
-  <animation>
-    <type>select</type>
-    <object-name>propdisc</object-name>
-    <condition>
-      <greater-than>
-        <property>rotors/main/rpm</property>
-        <value>150</value>
-      </greater-than>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>propblur</object-name>
-    <condition>
-    <and>
-      <greater-than>
-        <property>rotors/main/rpm</property>
-        <value>60</value>
-      </greater-than>
-      <less-than>
-        <property>rotors/main/rpm</property>
-        <value>150.001</value>
-      </less-than>
-    </and>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>pale1</object-name>
-    <object-name>pale2</object-name>
-    <object-name>pale3</object-name>
-    <object-name>pale4</object-name>
-    <condition>
-      <less-than>
-        <property>rotors/main/rpm</property>
-	<value>150</value>
-      </less-than>
-    </condition>
-  </animation>
-
-  <!-- Rotation du rotor -->
-  <animation>
-    <type>rotate</type>
-    <object-name>rotorup</object-name>
-    <object-name>pale1</object-name>
-    <object-name>pale2</object-name>
-    <object-name>pale3</object-name>
-    <object-name>pale4</object-name>
-    <object-name>propblur</object-name>
-    <object-name>propdisc</object-name>
-    <property>rotors/main/roll-deg</property>
-    <axis>
-      <x> 1.000 </x>
-      <y> 0.000 </y>
-      <z> 0.000 </z>
-    </axis>
-     <center>
-       <x-m> -1.371 </x-m>
-       <y-m>  0.000 </y-m>
-       <z-m>  2.895 </z-m>
-     </center>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>rotorup</object-name>
-    <object-name>pale1</object-name>
-    <object-name>pale2</object-name>
-    <object-name>pale3</object-name>
-    <object-name>pale4</object-name>
-    <object-name>propblur</object-name>
-    <object-name>propdisc</object-name>
-    <property>rotors/main/yaw-deg</property>
-    <axis>
-      <x> 0.000 </x>
-      <y>-1.000 </y>
-      <z> 0.000 </z>
-    </axis>
-     <center>
-       <x-m> -1.371 </x-m>
-       <y-m>  0.000 </y-m>
-       <z-m>  2.895 </z-m>
-     </center>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>rotorup</object-name>
-    <object-name>rotor</object-name>
-    <object-name>pale1</object-name>
-    <object-name>pale2</object-name>
-    <object-name>pale3</object-name>
-    <object-name>pale4</object-name>
-    <object-name>propblur</object-name>
-    <object-name>propdisc</object-name>
-    <property>rotors/main/blade[0]/position-deg</property>
-     <center>
-       <x-m> -1.371 </x-m>
-       <y-m>  0.000 </y-m>
-       <z-m>  2.895 </z-m>
-     </center>
-     <axis>
-       <x>  0.000 </x>
-       <y>  0.000 </y>
-       <z>  1.000 </z>
-     </axis>
   </animation>
 
   <!-- Sélection Pâles/blur  rotor de queue -->

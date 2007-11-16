@@ -7,7 +7,8 @@ S58 simulation config.
 -->
 
 <PropertyList>
-	<sim>
+	<sim include="Nasal/views.xml">
+
 		<description>Sikorsky S58 (Yasim)</description>
 		<author>BARANGER Emmanuel (3D),Reagan Thomas , Maik Justus (FDM)</author>
 		<status>alpha</status>
@@ -38,55 +39,6 @@ S58 simulation config.
 				<rotor-step-deg type="float">-1.0</rotor-step-deg>
 			</s58>
 		</model>
-
-		<view n="0">
-			<internal archive="y">true</internal>
-			<config>
-				<x-offset-m archive="y">  0.383 </x-offset-m>
-				<!--right-->
-				<y-offset-m archive="y">  1.948 </y-offset-m>
-				<!--up-->
-				<z-offset-m archive="y">  2.191 </z-offset-m>
-				<!--back-->
-				<!-- <pitch-offset-deg>-8</pitch-offset-deg> -->
-			</config>
-		</view>
-
-		<view n="1">
-			<config>
-				<target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
-			</config>
-		</view>
-
-		<view n="2">
-			<config>
-				<target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
-			</config>
-		</view>
-
-		<view n="3">
-			<config>
-				<target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
-			</config>
-		</view>
-
-		<view n="4">
-			<config>
-				<target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
-			</config>
-		</view>
-
-		<view n="5">
-			<config>
-				<target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
-			</config>
-		</view>
-
-		<view n="6">
-			<config>
-				<target-z-offset-m archive="y" type="double">4.5</target-z-offset-m>
-			</config>
-		</view>
 
 		<weight n="0">
 			<name>Pilot</name>
@@ -204,7 +156,7 @@ S58 simulation config.
 
 	<nasal>
 		<s58>
-			<file>Aircraft/Sikorsky-S58/Models/s58.nas</file>
+			<file>Aircraft/Sikorsky-S58/Nasal/s58.nas</file>
 		</s58>
 	</nasal>
 

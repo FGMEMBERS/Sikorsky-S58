@@ -7,164 +7,122 @@ S58 simulation config.
 -->
 
 <PropertyList>
-	<sim include="Nasal/views.xml">
 
-		<description>Sikorsky S58 (Yasim)</description>
-		<author>BARANGER Emmanuel (3D),Reagan Thomas , Maik Justus (FDM)</author>
-		<status>alpha</status>
-		<aircraft-version>0.1</aircraft-version>
-		<flight-model>yasim</flight-model>
-		<aero>s58</aero>
-		<fuel-fraction>0.8</fuel-fraction>
+  <sim include="Nasal/views.xml">
 
-		<startup>
-			<splash-texture>Aircraft/Sikorsky-S58/s58-splash.rgb</splash-texture>
-		</startup>
+    <description>Sikorsky S58 (Yasim)</description>
+    <author>BARANGER Emmanuel (3D), Reagan Thomas, Maik Justus (FDM)</author>
+    <status>alpha</status>
+    <license>GPL v2</license>
 
-		<sound>
-			<path>Aircraft/Sikorsky-S58/Sounds/s58-sound.xml</path>
-		</sound>
+    <flight-model>yasim</flight-model>
+    <aero>s58</aero>
+    <fuel-fraction>0.8</fuel-fraction>
 
-		<!--
-		<instrumentation>
-			<path>Aircraft/Sikorsky-S58/Models/instrumentation/instrumentation.xml</path>
-		</instrumentation>
-		-->
+    <startup>
+      <splash-texture>Aircraft/Sikorsky-S58/s58-splash.rgb</splash-texture>
+    </startup>
 
-		<model>
-			<path archive="y">Aircraft/Sikorsky-S58/Models/s58.xml</path>
-			<s58>
-				<state type="int">0</state>
-				<engine type="float">0.0</engine>
-				<rotor-step-deg type="float">-1.0</rotor-step-deg>
-			</s58>
-		</model>
+    <sound>
+      <path>Aircraft/Sikorsky-S58/Sounds/s58-sound.xml</path>
+    </sound>
 
-		<weight n="0">
-			<name>Pilot</name>
-			<weight-lb>180</weight-lb>
-			<max-lb>300</max-lb>
-		</weight>
+    <model>
+      <path archive="y">Aircraft/Sikorsky-S58/Models/s58.xml</path>
+      <s58>
+        <state type="int">0</state>
+        <engine type="float">0.0</engine>
+        <rotor-step-deg type="float">-1.0</rotor-step-deg>
+      </s58>
+    </model>
 
-		<weight n="1">
-			<name>Co-Pilot</name>
-			<weight-lb>180</weight-lb>
-			<max-lb>300</max-lb>
-		</weight>
+    <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
 
-		<weight n="2">
-			<name>Right Passenger</name>
-			<weight-lb>0</weight-lb>
-			<max-lb>300</max-lb>
-		</weight>
+    <weight n="1">
+      <name>Co-Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
 
-		<weight n="3">
-			<name>Middle Passenger</name>
-			<weight-lb>0</weight-lb>
-			<max-lb>300</max-lb>
-		</weight>
+    <weight n="2">
+      <name>Right Passenger</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
 
-		<weight n="4">
-			<name>Left Passenger</name>
-			<weight-lb>0</weight-lb>
-			<max-lb>300</max-lb>
-		</weight>
+    <weight n="3">
+      <name>Middle Passenger</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
 
-		<weight n="5">
-			<name>Load</name>
-			<weight-lb>0</weight-lb>
-			<max-lb>800</max-lb>
-		</weight>
+    <weight n="4">
+      <name>Left Passenger</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
 
-		<help>
-			<title>Sikorsky S 58 - background and help</title>
-			<line></line>
-			<line>Informations about the Sikorsky S58</line>
-			<line></line>
-		</help>
-	</sim>
+    <weight n="5">
+      <name>Load</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>800</max-lb>
+    </weight>
 
-	<controls>
-		<engines>
-			<engine n="0">
-				<magnetos>0</magnetos>
-			</engine>
-		</engines>
-		<gear>
-			<brake-parking>1</brake-parking>
-		</gear>
-		<rotor>
-			<reltarget>1</reltarget>
-			<maxreltorque>1</maxreltorque>
-		</rotor>
-	</controls>
+    <help>
+      <title>Sikorsky S 58 - background and help</title>
+      <line></line>
+      <key>
+        <name>d</name>
+        <desc>Left door</desc>
+      </key>
+      <key>
+        <name>D</name>
+        <desc>Left windows</desc>
+      </key>
+    </help>
 
-	<instrumentation>
-		<gsdi>
-			<serviceable type="bool">true</serviceable>
-		</gsdi>
-	</instrumentation>
-	<input>
-		<keyboard>
-			<key n="78">
-				<name>N</name>
-				<desc>Toggle rotor brake</desc>
-				<binding>
-					<command>nasal</command>
-					<script>
-						var p = "/controls/rotor/brake";
-						setprop(p, !getprop(p));
-					</script>
-				</binding>
-			</key>
+  </sim>
 
-			<key n="110">
-				<name>n</name>
-				<desc>Apply rotor brake</desc>
-				<binding>
-					<command>nasal</command>
-					<script>interpolate("/controls/rotor/brake", 1.0, 2)</script>
-				</binding>
-				<mod-up>
-					<binding>
-						<command>nasal</command>
-						<script>interpolate("/controls/rotor/brake", 0.0, 2)</script>
-					</binding>
-				</mod-up>
-			</key>
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>0</magnetos>
+      </engine>
+    </engines>
+    <gear>
+      <brake-parking>1</brake-parking>
+    </gear>
+    <rotor>
+      <reltarget>1</reltarget>
+      <maxreltorque>1</maxreltorque>
+    </rotor>
+  </controls>
 
-			<key n="123">
-				<name>{</name>
-				<desc>Shutdown Engines</desc>
-				<binding>
-					<command>nasal</command>
-					<script>s58.engines(0)</script>
-				</binding>
-			</key>
+  <instrumentation>
+    <gsdi>
+    <serviceable type="bool">true</serviceable>
+    </gsdi>
+  </instrumentation>
 
-			<key n="125">
-				<name>}</name>
-				<desc>Start Engines</desc>
-				<binding>
-					<command>nasal</command>
-					<script>s58.engines(1)</script>
-				</binding>
-			</key>
+  <input>
+    <keyboard include="Nasal/s58-keyboard.xml"/>
+  </input>
 
-		</keyboard>
-	</input>
+  <nasal>
+    <s58>
+      <file>Aircraft/Sikorsky-S58/Nasal/doors.nas</file>
+      <file>Aircraft/Sikorsky-S58/Nasal/s58.nas</file>
+    </s58>
+  </nasal>
 
-	<nasal>
-		<s58>
-			<file>Aircraft/Sikorsky-S58/Nasal/s58.nas</file>
-		</s58>
-	</nasal>
-
-
-	<rotors>
-		<main>
-			<rpm type="double">0</rpm>
-		</main>
-	</rotors>
+  <rotors>
+    <main>
+      <rpm type="double">0</rpm>
+    </main>
+  </rotors>
 
 </PropertyList>

@@ -104,7 +104,8 @@ S58 simulation config.
 
   <instrumentation>
     <gsdi>
-    <serviceable type="bool">true</serviceable>
+      <serviceable type="bool">true</serviceable>
+      <enabled type="bool">true</enabled>
     </gsdi>
   </instrumentation>
 
@@ -122,7 +123,13 @@ S58 simulation config.
   <rotors>
     <main>
       <rpm type="double">0</rpm>
+      <cone-deg type="double">0</cone-deg>
+      <cone1-deg type="double">0</cone1-deg>
+      <cone2-deg type="double">0</cone2-deg>
+      <cone3-deg type="double">0</cone3-deg>
+      <cone4-deg type="double">0</cone4-deg>
     </main>
   </rotors>
 
 </PropertyList>
+

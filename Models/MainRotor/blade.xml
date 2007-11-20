@@ -42,7 +42,7 @@
     <object-name>propdisc4</object-name>
   </animation>
 
-  <!-- Sélection blade/blur/disc maibn rotor-->
+  <!-- Sélection blade/blur/disc main rotor-->
   <animation>
     <type>select</type>
     <object-name>propdisc1</object-name>
@@ -97,7 +97,7 @@
     <object-name>blade4</object-name>
     <object-name>propblur4</object-name>
     <object-name>propdisc4</object-name>
-    <property>rotors/main/cone-deg</property>
+    <property>rotors/main/cone4-deg</property>
     <factor> -1 </factor>
     <center>
        <x-m>  6.682 </x-m>
@@ -120,7 +120,7 @@
     <object-name>blade3</object-name>
     <object-name>propblur3</object-name>
     <object-name>propdisc3</object-name>
-    <property>rotors/main/cone-deg</property>
+    <property>rotors/main/cone3-deg</property>
     <factor> -1 </factor>
     <center>
        <x-m>  4.886 </x-m>
@@ -146,7 +146,7 @@
     <object-name>blade2</object-name>
     <object-name>propblur2</object-name>
     <object-name>propdisc2</object-name>
-    <property>rotors/main/cone-deg</property>
+    <property>rotors/main/cone2-deg</property>
     <factor> -1 </factor>
     <center>
        <x-m>  3.089 </x-m>
@@ -175,7 +175,7 @@
     <object-name>blade1</object-name>
     <object-name>propblur1</object-name>
     <object-name>propdisc1</object-name>
-    <property>rotors/main/cone-deg</property>
+    <property>rotors/main/cone1-deg</property>
     <factor> -1 </factor>
     <center>
        <x-m> 0.000 </x-m>

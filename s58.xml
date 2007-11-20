@@ -12,9 +12,9 @@
 
 
 <rotor name="main" x="-3.2" y="0.0" z="2.74" nx="0.05" ny="0" nz="1." fx="1" fy="0" fz="0" ccw="1"
-	   maxcollective="10.8" mincollective="0.2" mincyclicele="-4.5" maxcyclicele="6.5" mincyclicail="-2" maxcyclicail="2.5"
+	   maxcollective="10.8" mincollective="0.2" mincyclicele="-4.5" maxcyclicele="6.5" mincyclicail="-2.5" maxcyclicail="2.5"
 	   diameter="17" numblades="4" weightperblade="175" twist="-8" chord="0.4167" rpm="235" relbladecenter="0.5" dynamic="1"
-	   rellenflaphinge="0.0375" delta3="0" delta=".25" pitch-a="10" pitch-b="15" flapmin="-15" flapmax="15" flap0="-5" flap0factor="0"
+	   rellenflaphinge="0.0375" delta3="0" delta=".25" pitch-a="10" pitch-b="15" flapmin="-15" flapmax="15" flap0="-7.5" flap0factor="0"
 	   notorque="0" dragfactor="0.30" translift-ve="20" translift-maxfactor="1.3" ground-effect-constant="0.1" taper="1"
 	   number-of-segments="8" number-of-parts="8" rel-len-where-incidence-is-measured="0.7" rel-len-blade-start="0.16"
 	   airfoil-lift-coefficient="6.3" airfoil-drag-coefficient0="0.0075" airfoil-drag-coefficient1="0.1" incidence-stall-zero-speed="18"
@@ -109,14 +109,16 @@
 
 <!--	<ballast x="-0.7" y="+0.0" z="-1.0" mass="450"/> -->
 
-	<ballast x="+1" y="+0.0" z=" -1.0" mass="300"/>
-	<ballast x="+1" y="+0.0" z=" -1.0" mass="100"/>
+	<ballast x="+1" y="+0.0" z=" -1.0" mass="200"/>
+	<ballast x="+1" y="+0.0" z=" -1.0" mass="200"/>
 	
-	<ballast x="+1" y="-2.0" z=" -3.0" mass="300"/>
-	<ballast x="+1" y=" 2.0" z="  1.0" mass="300"/>
+	<ballast x="+1" y="-0.0" z=" -1.0" mass="300"/>
+	<ballast x="+1" y=" 0.0" z=" -1.0" mass="300"/>
 	
-	<ballast x="+1" y="+0.0" z=" -5.0" mass="400"/>
-	<ballast x="+1" y="+0.0" z="  3.0" mass="400"/>
+	<ballast x="+9" y="+0.0" z=" -5.0" mass="400"/>
+	<ballast x="-7" y="-0.0" z="  3.0" mass="400"/>
+	
+	<ballast x="-3.95" y="+0.0" z="  0.1" mass="10000"/>
 
 
 	<weight x="-2.0" y=".33" z="-.5" mass-prop="/sim/weight[0]/weight-lb"/>

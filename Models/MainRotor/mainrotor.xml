@@ -16,7 +16,7 @@
   <!-- Blades -->
   <model>
     <name>Blade1</name>
-    <path>Aircraft/Sikorsky-S58/Models/MainRotor/blade.xml</path>
+    <path>Aircraft/Sikorsky-S58/Models/MainRotor/blade1.xml</path>
     <offsets>
       <x-m> 0.000 </x-m>
       <y-m> 0.000 </y-m>
@@ -29,7 +29,7 @@
 
   <model>
     <name>Blade2</name>
-    <path>Aircraft/Sikorsky-S58/Models/MainRotor/blade.xml</path>
+    <path>Aircraft/Sikorsky-S58/Models/MainRotor/blade2.xml</path>
     <offsets>
       <x-m> 0.000 </x-m>
       <y-m> 0.000 </y-m>
@@ -42,7 +42,7 @@
 
   <model>
     <name>Blade3</name>
-    <path>Aircraft/Sikorsky-S58/Models/MainRotor/blade.xml</path>
+    <path>Aircraft/Sikorsky-S58/Models/MainRotor/blade3.xml</path>
     <offsets>
       <x-m> 0.000 </x-m>
       <y-m> 0.000 </y-m>
@@ -55,7 +55,7 @@
 
   <model>
     <name>Blade4</name>
-    <path>Aircraft/Sikorsky-S58/Models/MainRotor/blade.xml</path>
+    <path>Aircraft/Sikorsky-S58/Models/MainRotor/blade4.xml</path>
     <offsets>
       <x-m> 0.000 </x-m>
       <y-m> 0.000 </y-m>

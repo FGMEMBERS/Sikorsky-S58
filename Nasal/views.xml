@@ -11,10 +11,10 @@
     <config>
       <from-model type="bool">true</from-model>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-      <x-offset-m archive="y" type="double"> -0.383 </x-offset-m> <!--Right-->
-      <y-offset-m archive="y" type="double">  1.948 </y-offset-m> <!--Up-->
-      <z-offset-m archive="y" type="double">  2.291 </z-offset-m> <!--Back-->
-      <pitch-offset-deg>-15</pitch-offset-deg>
+      <x-offset-m archive="y" type="double"> -0.3 </x-offset-m> <!--Right-->
+      <y-offset-m archive="y" type="double">  0.7 </y-offset-m> <!--Up-->
+      <z-offset-m archive="y" type="double">  3.3 </z-offset-m> <!--Back-->
+      <heading-offset-deg>270</heading-offset-deg>
       <default-field-of-view-deg>60</default-field-of-view-deg>
       <dynamic-view type="bool">true</dynamic-view>
     </config>

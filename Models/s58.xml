@@ -14,14 +14,18 @@
 
   <animation>
     <object-name>fuselage</object-name>
-    <object-name>interieur</object-name>
-    <object-name>sol</object-name>
+    <object-name>tourgrille</object-name>
+    <object-name>hstab</object-name>
     <object-name>tail</object-name>
-    <object-name>pilot</object-name>
-    <object-name>copilot</object-name>
     <object-name>roueG</object-name>
     <object-name>roueD</object-name>
     <object-name>roueA</object-name>
+    <object-name>pieds</object-name>
+    <object-name>bancs</object-name>
+    <object-name>interieur1</object-name>
+    <object-name>door</object-name>
+    <object-name>fond</object-name>
+    <object-name>echappement</object-name>
     <object-name>tubeG1</object-name>
     <object-name>tubeG2</object-name>
     <object-name>tubeG3</object-name>
@@ -37,19 +41,38 @@
     <object-name>tubeD6</object-name>
     <object-name>tubeD7</object-name>
     <object-name>tubeA</object-name>
-    <object-name>fond</object-name>
-    <object-name>hstab</object-name>
-    <object-name>echappement</object-name>
-    <object-name>tourgrille</object-name>
+    <object-name>interieur</object-name>
+    <object-name>interieur0</object-name>
+    <object-name>sol</object-name>
+    <object-name>plafond</object-name>
+    <object-name>seat.L</object-name>
+    <object-name>seat.R</object-name>
+    <object-name>doorlever</object-name>
+    <object-name>pwindowframe.L</object-name>
+    <object-name>windowlever.L</object-name>
+    <object-name>pwindowframe.R</object-name>
+    <object-name>windowlever.R</object-name>
+
+    <object-name>pilot</object-name>
+    <object-name>copilot</object-name>
+
     <!-- Transparence -->
-    <object-name>vitre</object-name>
     <object-name>grille</object-name>
+    <object-name>noshadow.vitre</object-name>
+    <object-name>noshadow.pwindow.L</object-name>
+    <object-name>noshadow.pwindow.R</object-name>
+    <object-name>noshadow.doorglass</object-name>
   </animation>
 
   <animation>
     <type>noshadow</type>
-    <object-name>vitre</object-name>
+    <object-name>grille</object-name>
+    <object-name>noshadow.vitre</object-name>
+    <object-name>noshadow.pwindow.L</object-name>
+    <object-name>noshadow.pwindow.R</object-name>
+    <object-name>noshadow.doorglass</object-name>
   </animation>
+
 
   <!-- Rotor principale -->
   <model>
@@ -182,6 +205,68 @@
       <x>  0.000 </x>
       <y> -1.000 </y>
       <z>  0.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>door</object-name>
+    <object-name>noshadow.doorglass</object-name>
+    <object-name>doorlever</object-name>
+    <property>instrumentation/doors/passenger/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.2</ind>
+        <dep>0.1</dep>
+      </entry>
+      <entry>
+        <ind>0.8</ind>
+        <dep>1.1</dep>
+      </entry>
+      <entry>
+        <ind>1.00</ind>
+        <dep>1.2</dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>pwindowframe.R</object-name>
+    <object-name>noshadow.pwindow.R</object-name>
+    <object-name>windowlever.R</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.2</ind>
+        <dep>0.1</dep>
+      </entry>
+      <entry>
+        <ind>0.8</ind>
+        <dep>0.7</dep>
+      </entry>
+      <entry>
+        <ind>1.00</ind>
+        <dep>0.8</dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x>1.0</x>
+      <y>0.05</y>
+      <z>0.0</z>
     </axis>
   </animation>
 

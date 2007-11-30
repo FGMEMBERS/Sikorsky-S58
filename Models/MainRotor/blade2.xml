@@ -196,7 +196,7 @@
     <object-name>blade2</object-name>
     <object-name>blade3</object-name>
     <object-name>blade4</object-name>
-    <property>rotors/main/blade/incidence-deg</property>
+    <property>rotors/main/blade[1]/incidence-deg</property>
     <center>
        <x-m> 0.000 </x-m>
        <y-m> 0.000 </y-m>

@@ -77,11 +77,11 @@ S58 simulation config.
       <line></line>
       <key>
         <name>d</name>
-        <desc>Left door</desc>
+        <desc>Right door</desc>
       </key>
       <key>
         <name>D</name>
-        <desc>Left windows</desc>
+        <desc>Pilot window</desc>
       </key>
     </help>
 

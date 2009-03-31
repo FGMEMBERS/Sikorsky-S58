@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -12,6 +12,15 @@
     <heading-deg> 0.000 </heading-deg>
   </offsets>
 
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/Sikorsky-S58/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+
   <animation>
     <object-name>fuselage</object-name>
     <object-name>tourgrille</object-name>
@@ -20,11 +29,6 @@
     <object-name>roueG</object-name>
     <object-name>roueD</object-name>
     <object-name>roueA</object-name>
-    <object-name>pieds</object-name>
-    <object-name>bancs</object-name>
-    <object-name>interieur1</object-name>
-    <object-name>door</object-name>
-    <object-name>fond</object-name>
     <object-name>echappement</object-name>
     <object-name>tubeG1</object-name>
     <object-name>tubeG2</object-name>
@@ -41,38 +45,115 @@
     <object-name>tubeD6</object-name>
     <object-name>tubeD7</object-name>
     <object-name>tubeA</object-name>
-    <object-name>interieur</object-name>
-    <object-name>interieur0</object-name>
-    <object-name>sol</object-name>
-    <object-name>plafond</object-name>
-    <object-name>seat.L</object-name>
-    <object-name>seat.R</object-name>
-    <object-name>doorlever</object-name>
-    <object-name>pwindowframe.L</object-name>
-    <object-name>windowlever.L</object-name>
-    <object-name>pwindowframe.R</object-name>
-    <object-name>windowlever.R</object-name>
-
-    <object-name>pilot</object-name>
-    <object-name>copilot</object-name>
+    <object-name>porte</object-name>
+    <object-name>windowG</object-name>
+    <object-name>windowD</object-name>
+    <object-name>poigneG</object-name>
+    <object-name>poigneD</object-name>
+    <object-name>poigneA</object-name>
 
     <!-- Transparence -->
     <object-name>grille</object-name>
-    <object-name>noshadow.vitre</object-name>
-    <object-name>noshadow.pwindow.L</object-name>
-    <object-name>noshadow.pwindow.R</object-name>
-    <object-name>noshadow.doorglass</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>vitres</object-name>
+    <object-name>vitreporte</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass_shader.png</texture>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>vitres</object-name>
+    <object-name>vitreporte</object-name>
   </animation>
 
   <animation>
     <type>noshadow</type>
     <object-name>grille</object-name>
-    <object-name>noshadow.vitre</object-name>
-    <object-name>noshadow.pwindow.L</object-name>
-    <object-name>noshadow.pwindow.R</object-name>
-    <object-name>noshadow.doorglass</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>vitres</object-name>
+    <object-name>vitreporte</object-name>
   </animation>
 
+
+  <animation>
+    <object-name>fuselage</object-name>
+    <object-name>tourgrille</object-name>
+    <object-name>hstab</object-name>
+    <object-name>tail</object-name>
+    <object-name>roueG</object-name>
+    <object-name>roueD</object-name>
+    <object-name>roueA</object-name>
+    <object-name>echappement</object-name>
+    <object-name>tubeG1</object-name>
+    <object-name>tubeG2</object-name>
+    <object-name>tubeG3</object-name>
+    <object-name>tubeG4</object-name>
+    <object-name>tubeG5</object-name>
+    <object-name>tubeG6</object-name>
+    <object-name>tubeG7</object-name>
+    <object-name>tubeD1</object-name>
+    <object-name>tubeD2</object-name>
+    <object-name>tubeD3</object-name>
+    <object-name>tubeD4</object-name>
+    <object-name>tubeD5</object-name>
+    <object-name>tubeD6</object-name>
+    <object-name>tubeD7</object-name>
+    <object-name>tubeA</object-name>
+    <object-name>porte</object-name>
+    <object-name>windowG</object-name>
+    <object-name>windowD</object-name>
+    <object-name>poigneG</object-name>
+    <object-name>poigneD</object-name>
+    <object-name>poigneA</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+<!--
+    <diffuse>
+      <red-prop>diffuse/red</red-prop>
+      <green-prop>diffuse/green</green-prop>
+      <blue-prop>diffuse/blue</blue-prop>
+    </diffuse>
+
+    <ambient>
+      <red-prop>ambient/red</red-prop>
+      <green-prop>ambient/green</green-prop>
+      <blue-prop>ambient/blue</blue-prop>
+    </ambient>
+-->
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+<!--
+    <shininess>
+      <shininess-prop>shininess</shininess-prop>
+    </shininess>
+-->
+  </animation>
+
+  <!-- Intérieur -->
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/interior.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
+  </model>
 
   <!-- Rotor principale -->
   <model>
@@ -97,28 +178,6 @@
     </offsets>
   </model>
 
-  <!-- Planches de bord -->
-  <model>
-    <path>Aircraft/Sikorsky-S58/Models/Panel/panel.xml</path>
-    <offsets>
-      <x-m> -3.566 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  1.246 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Pilote invisible depuis le cockpit -->
-  <animation>
-    <type>select</type>
-    <object-name>pilot</object-name>
-    <condition>
-      <greater-than>
-        <property>sim/current-view/view-number</property>
-        <value>0</value>
-      </greater-than>
-    </condition>
-  </animation>
-
   <!-- Compresssion -->
   <animation>
     <type>rotate</type>
@@ -129,14 +188,8 @@
     <object-name>tubeG4</object-name>
     <property>gear/gear[0]/compression-m</property>
     <interpolation>
-      <entry>
-        <ind>  0.0 </ind>
-        <dep> -4.0 </dep>
-      </entry>
-      <entry>
-        <ind>  1.0 </ind>
-        <dep> 45.0 </dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> -4 </dep></entry>
+      <entry><ind> 1 </ind><dep> 45 </dep></entry>
     </interpolation>
     <center>
       <x-m> -2.602 </x-m>
@@ -150,7 +203,6 @@
     </axis>
   </animation>
 
-  <!-- Compresssion -->
   <animation>
     <type>rotate</type>
     <object-name>roueD</object-name>
@@ -160,14 +212,8 @@
     <object-name>tubeD4</object-name>
     <property>gear/gear[1]/compression-m</property>
     <interpolation>
-      <entry>
-        <ind>  0.0 </ind>
-        <dep> -4.0 </dep>
-      </entry>
-      <entry>
-        <ind>  1.0 </ind>
-        <dep> 45.0 </dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> -4 </dep></entry>
+      <entry><ind> 1 </ind><dep> 45 </dep></entry>
     </interpolation>
     <center>
       <x-m> -2.602 </x-m>
@@ -187,14 +233,8 @@
     <object-name>tubeA</object-name>
     <property>gear/gear[2]/compression-m</property>
     <interpolation>
-      <entry>
-        <ind>  0.0 </ind>
-        <dep> -4.0 </dep>
-      </entry>
-      <entry>
-        <ind>  1.0 </ind>
-        <dep> 70.0 </dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> -4 </dep></entry>
+      <entry><ind> 1 </ind><dep> 70 </dep></entry>
     </interpolation>
     <center>
       <x-m>  5.345 </x-m>
@@ -208,65 +248,42 @@
     </axis>
   </animation>
 
+  <!-- Animation porte et fenêtre -->
   <animation>
     <type>translate</type>
-    <object-name>door</object-name>
-    <object-name>noshadow.doorglass</object-name>
-    <object-name>doorlever</object-name>
+    <object-name>porte</object-name>
+    <object-name>vitreporte</object-name>
+    <object-name>poigneA</object-name>
     <property>instrumentation/doors/passenger/position-norm</property>
     <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>0.2</ind>
-        <dep>0.1</dep>
-      </entry>
-      <entry>
-        <ind>0.8</ind>
-        <dep>1.1</dep>
-      </entry>
-      <entry>
-        <ind>1.00</ind>
-        <dep>1.2</dep>
-      </entry>
+      <entry><ind> 0.0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 0.1 </dep></entry>
+      <entry><ind> 0.8 </ind><dep> 1.1 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 1.2 </dep></entry>
     </interpolation>
     <axis>
-      <x>1.0</x>
-      <y>0.0</y>
-      <z>0.0</z>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>translate</type>
-    <object-name>pwindowframe.R</object-name>
-    <object-name>noshadow.pwindow.R</object-name>
-    <object-name>windowlever.R</object-name>
+    <object-name>windowD</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>poigneD</object-name>
     <property>instrumentation/doors/crew/position-norm</property>
     <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>0.2</ind>
-        <dep>0.1</dep>
-      </entry>
-      <entry>
-        <ind>0.8</ind>
-        <dep>0.7</dep>
-      </entry>
-      <entry>
-        <ind>1.00</ind>
-        <dep>0.8</dep>
-      </entry>
+      <entry><ind> 0.0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 0.1 </dep></entry>
+      <entry><ind> 0.8 </ind><dep> 0.7 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 0.8 </dep></entry>
     </interpolation>
     <axis>
-      <x>1.0</x>
-      <y>0.05</y>
-      <z>0.0</z>
+      <x> 1.00 </x>
+      <y> 0.05 </y>
+      <z> 0.00 </z>
     </axis>
   </animation>
 

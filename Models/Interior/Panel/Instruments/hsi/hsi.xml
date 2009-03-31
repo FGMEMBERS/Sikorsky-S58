@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    $Id$
+    This is the Bendix/King KI252 HSI 3d instrument.
+    Maintainer: Torsten Dreyer
+    
+    $Log$
+    Revision 1.1  2009/03/31 00:42:26  helijah
+    - change color system
+    - change RGB format in PNG format
+    - Add chrome effect
+
+    Revision 1.2  2009-03-30 20:05:20  helijah
+    RGB -> PNG
+    Just one picture
+    Chrome effect on glass
+
+    Revision 1.1  2007-06-21 02:50:47  helijah
+    *** empty log message ***
+
+    Revision 1.1  2007-06-03 14:58:48  mfranz
+    Heiko SCHULZ: EC135 v0.2
+
+    Revision 1.2  2006-11-23 14:27:03  mfranz
+    Torsten DREYER:
+
+-->
+<PropertyList>
+
+  <path>hsi.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>headingselector</object-name>
+    <object-name>cursorselector</object-name>
+    <object-name>masque</object-name>
+    <object-name>compass</object-name>
+    <object-name>face</object-name>
+    <object-name>gsright</object-name>
+    <object-name>gsleft</object-name>
+    <object-name>HDGFlag</object-name>
+    <object-name>NAVFlag</object-name>
+    <object-name>headingbug</object-name>
+    <object-name>cursorhead</object-name>
+    <object-name>cursortail</object-name>
+    <object-name>cursordeflection</object-name>
+    <object-name>FROM</object-name>
+    <object-name>TO</object-name>
+    <object-name>aircraft</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>headingselector</object-name>
+    <object-name>cursorselector</object-name>
+    <object-name>masque</object-name>
+    <object-name>compass</object-name>
+    <object-name>face</object-name>
+    <object-name>gsright</object-name>
+    <object-name>gsleft</object-name>
+    <object-name>HDGFlag</object-name>
+    <object-name>NAVFlag</object-name>
+    <object-name>headingbug</object-name>
+    <object-name>cursorhead</object-name>
+    <object-name>cursortail</object-name>
+    <object-name>cursordeflection</object-name>
+    <object-name>FROM</object-name>
+    <object-name>TO</object-name>
+    <object-name>aircraft</object-name>
+    <emission>
+      <red>   0.028 </red>
+      <green> 0.014 </green>
+      <blue>  0.007 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>compass</object-name>
+    <property>/orientation/heading-magnetic-deg</property>
+    <factor>1.0</factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m> -0.001 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>headingbug</object-name>
+    <property>/instrumentation/hsi/heading-bug-rotation-deg</property>
+    <factor>1.0</factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+  </animation>
+
+<!--
+  <animation>
+    <type>rotate</type>
+    <object-name>hsi.Rotary</object-name>
+    <object-name>hsi.cursor</object-name>
+    <property>/instrumentation/hsi/cursor-rotation-deg</property>
+    <factor>1.0</factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+  </animation>
+-->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>headingselector</object-name>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <factor>4.0</factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m>  0.0000000 </x-m>
+      <y-m>  0.0331529 </y-m>
+      <z-m> -0.0242478 </z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cursorselector</object-name>
+    <property>/instrumentation/hsi/cursor-rotation-deg</property>
+    <factor>-4.0</factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m>  0.0000000 </x-m>
+      <y-m> -0.0331529 </y-m>
+      <z-m> -0.0242478 </z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>cursordeflection</object-name>
+    <property>/instrumentation/nav[0]/heading-needle-deflection</property>
+    <factor>0.00152675</factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>gsright</object-name>
+    <object-name>gsleft</object-name>
+    <property>/instrumentation/nav[0]/gs-needle-deflection</property>
+    <!--
+    <factor>0.022420</factor>
+    -->
+    <factor>0.004484</factor>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>gsright</object-name>
+    <object-name>gsleft</object-name>
+    <condition>
+      <property>/instrumentation/nav[0]/has-gs</property>
+      <greater-than>
+        <property>/instrumentation/nav[0]/gs-needle-deflection</property>
+        <value>-3.6</value>
+      </greater-than>
+      <less-than>
+        <property>/instrumentation/nav[0]/gs-needle-deflection</property>
+        <value>3.6</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>NAVFlag</object-name>
+    <condition>
+    <not>
+      <property>/instrumentation/nav[0]/in-range</property>
+    </not>
+    </condition>
+  </animation>
+
+  <!-- fixme: whould be nicer to have a rotation bound to spin -->
+  <animation>
+    <type>select</type>
+    <object-name>HDGFlag</object-name>
+    <condition>
+      <or>
+        <not>
+          <property>/instrumentation/heading-indicator/serviceable</property>
+        </not>
+        <less-than>
+          <property>/instrumentation/heading-indicator/spin</property>
+          <value type="double">0.9</value>
+        </less-than>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>TO</object-name>
+    <condition>
+      <property>/instrumentation/nav[0]/to-flag</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>FROM</object-name>
+    <condition>
+      <property>/instrumentation/nav[0]/from-flag</property>
+    </condition>
+  </animation>
+
+</PropertyList>

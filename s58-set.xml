@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <!--
 ************************************************************************
 S58 simulation config.
@@ -20,7 +21,7 @@ S58 simulation config.
     <fuel-fraction>0.8</fuel-fraction>
 
     <startup>
-      <splash-texture>Aircraft/Sikorsky-S58/s58-splash.rgb</splash-texture>
+      <splash-texture>Aircraft/Sikorsky-S58/s58-splash.png</splash-texture>
     </startup>
 
     <sound>
@@ -29,12 +30,27 @@ S58 simulation config.
 
     <model>
       <path archive="y">Aircraft/Sikorsky-S58/Models/s58.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
       <s58>
         <state type="int">0</state>
         <engine type="float">0.0</engine>
         <rotor-step-deg type="float">-1.0</rotor-step-deg>
       </s58>
     </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int" n="0">0</int>
+        <int type="int" n="1">0</int>
+        <int type="int" n="2">0</int>
+        <int type="int" n="3">0</int>
+        <int type="int" n="4">0</int>
+        <int type="int" n="5">0</int>
+      </generic>
+    </multiplay>
 
     <weight n="0">
       <name>Pilot</name>
@@ -85,6 +101,8 @@ S58 simulation config.
       </key>
     </help>
 
+    <menubar include="Dialogs/s58-menu.xml"/>
+
   </sim>
 
   <controls>
@@ -113,13 +131,6 @@ S58 simulation config.
     <keyboard include="Nasal/s58-keyboard.xml"/>
   </input>
 
-  <nasal>
-    <s58>
-      <file>Aircraft/Sikorsky-S58/Nasal/doors.nas</file>
-      <file>Aircraft/Sikorsky-S58/Nasal/s58.nas</file>
-    </s58>
-  </nasal>
-
   <rotors>
     <main>
       <rpm type="double">0</rpm>
@@ -130,6 +141,15 @@ S58 simulation config.
       <cone4-deg type="double">0</cone4-deg>
     </main>
   </rotors>
+
+  <nasal>
+    <s58>
+      <file>Aircraft/Sikorsky-S58/Nasal/doors.nas</file>
+      <file>Aircraft/Sikorsky-S58/Nasal/s58.nas</file>
+      <file>Aircraft/Sikorsky-S58/Nasal/liveries.nas</file>
+      <file>Aircraft/Sikorsky-S58/Nasal/light.nas</file>
+    </s58>
+  </nasal>
 
 </PropertyList>
 

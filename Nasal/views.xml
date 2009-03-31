@@ -5,22 +5,37 @@
   <chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
 
   <view n="100">
-    <name>Passanger Seat View</name>
+    <name>Co pilot Seat View</name>
     <internal archive="y">true</internal>
     <type>lookfrom</type>
     <config>
       <from-model type="bool">true</from-model>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-      <x-offset-m archive="y" type="double"> -0.3 </x-offset-m> <!--Right-->
-      <y-offset-m archive="y" type="double">  0.7 </y-offset-m> <!--Up-->
-      <z-offset-m archive="y" type="double">  3.3 </z-offset-m> <!--Back-->
-      <heading-offset-deg>270</heading-offset-deg>
+      <x-offset-m archive="y"> -0.383 </x-offset-m> <!--right-->
+      <y-offset-m archive="y">  1.948 </y-offset-m> <!--up-->
+      <z-offset-m archive="y">  2.291 </z-offset-m> <!--back-->
       <default-field-of-view-deg>60</default-field-of-view-deg>
       <dynamic-view type="bool">true</dynamic-view>
     </config>
   </view>
 
   <view n="101">
+    <name>Passanger Seat View</name>
+    <internal archive="y">true</internal>
+    <type>lookfrom</type>
+    <config>
+      <from-model type="bool">true</from-model>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <x-offset-m archive="y" type="double"> 0.3 </x-offset-m> <!--Right-->
+      <y-offset-m archive="y" type="double"> 0.7 </y-offset-m> <!--Up-->
+      <z-offset-m archive="y" type="double"> 3.3 </z-offset-m> <!--Back-->
+      <pitch-offset-deg>-10</pitch-offset-deg>
+      <default-field-of-view-deg>60</default-field-of-view-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+    </config>
+  </view>
+
+  <view n="102">
     <name>Tail Camera View</name>
     <type>lookfrom</type>
     <internal archive="y">true</internal>
@@ -37,12 +52,14 @@
   </view>
 
   <view n="0">
+    <name>Pilot Seat View</name>
     <internal archive="y">true</internal>
     <config>
       <x-offset-m archive="y">  0.383 </x-offset-m> <!--right-->
       <y-offset-m archive="y">  1.948 </y-offset-m> <!--up-->
       <z-offset-m archive="y">  2.291 </z-offset-m> <!--back-->
-      <pitch-offset-deg>-10</pitch-offset-deg>
+      <pitch-offset-deg>-15</pitch-offset-deg>
+      <default-field-of-view-deg>60</default-field-of-view-deg>
     </config>
   </view>
 

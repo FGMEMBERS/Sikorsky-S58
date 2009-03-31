@@ -7,7 +7,7 @@ OBJECT poly
 name "blade1"
 data 6
 blade1
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 29
@@ -185,7 +185,7 @@ OBJECT poly
 name "blade2"
 data 6
 blade2
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 20
@@ -285,7 +285,7 @@ OBJECT poly
 name "blade3"
 data 6
 blade3
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 20
@@ -385,7 +385,7 @@ OBJECT poly
 name "blade4"
 data 6
 blade4
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 25
@@ -576,7 +576,7 @@ OBJECT poly
 name "propblur1"
 data 9
 propblur1
-texture "prop.rgb"
+texture "prop.png"
 texrep 1 1
 crease 30.000000
 numvert 8
@@ -618,7 +618,7 @@ OBJECT poly
 name "propblur2"
 data 9
 propblur2
-texture "prop.rgb"
+texture "prop.png"
 texrep 1 1
 crease 30.000000
 numvert 12
@@ -668,7 +668,7 @@ OBJECT poly
 name "propblur3"
 data 9
 propblur3
-texture "prop.rgb"
+texture "prop.png"
 texrep 1 1
 crease 30.000000
 numvert 12
@@ -718,7 +718,7 @@ OBJECT poly
 name "propblur4"
 data 9
 propblur4
-texture "prop.rgb"
+texture "prop.png"
 texrep 1 1
 crease 30.000000
 numvert 9
@@ -765,7 +765,7 @@ OBJECT poly
 name "propdisc1"
 data 9
 propdisc1
-texture "prop.rgb"
+texture "prop.png"
 texrep 1 1
 crease 30.000000
 numvert 12
@@ -835,7 +835,7 @@ OBJECT poly
 name "propdisc2"
 data 9
 propdisc2
-texture "prop.rgb"
+texture "prop.png"
 texrep 1 1
 crease 30.000000
 numvert 20
@@ -921,7 +921,7 @@ OBJECT poly
 name "propdisc3"
 data 9
 propdisc3
-texture "prop.rgb"
+texture "prop.png"
 texrep 1 1
 crease 30.000000
 numvert 20
@@ -1007,7 +1007,7 @@ OBJECT poly
 name "propdisc4"
 data 9
 propdisc4
-texture "prop.rgb"
+texture "prop.png"
 texrep 1 1
 crease 30.000000
 numvert 15

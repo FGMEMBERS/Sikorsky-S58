@@ -81,6 +81,7 @@
 
 
   <animation>
+    <type>material</type>
     <object-name>fuselage</object-name>
     <object-name>tourgrille</object-name>
     <object-name>hstab</object-name>

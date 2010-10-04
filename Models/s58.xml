@@ -3,14 +3,6 @@
 <PropertyList>
 
   <path>s58.ac</path>
-  <offsets>
-    <x-m> 4.570 </x-m>
-    <y-m> 0.000 </y-m>
-    <z-m> 0.100 </z-m>
-    <roll-deg>    0.000 </roll-deg>
-    <pitch-deg>   0.000 </pitch-deg>
-    <heading-deg> 0.000 </heading-deg>
-  </offsets>
 
   <nasal>
     <load>
@@ -59,26 +51,6 @@
     <object-name>vitres</object-name>
     <object-name>vitreporte</object-name>
   </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>glass_shader.png</texture>
-    <object-name>vitreG</object-name>
-    <object-name>vitreD</object-name>
-    <object-name>vitres</object-name>
-    <object-name>vitreporte</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>grille</object-name>
-    <object-name>vitreG</object-name>
-    <object-name>vitreD</object-name>
-    <object-name>vitres</object-name>
-    <object-name>vitreporte</object-name>
-  </animation>
-
 
   <animation>
     <type>material</type>
@@ -146,6 +118,54 @@
 -->
   </animation>
 
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>tourgrille</object-name>
+    <object-name>hstab</object-name>
+    <object-name>tail</object-name>
+    <object-name>tubeG1</object-name>
+    <object-name>tubeG2</object-name>
+    <object-name>tubeG3</object-name>
+    <object-name>tubeG4</object-name>
+    <object-name>tubeG5</object-name>
+    <object-name>tubeG6</object-name>
+    <object-name>tubeG7</object-name>
+    <object-name>tubeD1</object-name>
+    <object-name>tubeD2</object-name>
+    <object-name>tubeD3</object-name>
+    <object-name>tubeD4</object-name>
+    <object-name>tubeD5</object-name>
+    <object-name>tubeD6</object-name>
+    <object-name>tubeD7</object-name>
+    <object-name>tubeA</object-name>
+    <object-name>porte</object-name>
+    <object-name>windowG</object-name>
+    <object-name>windowD</object-name>
+    <object-name>poigneG</object-name>
+    <object-name>poigneD</object-name>
+    <object-name>poigneA</object-name>
+  </effect>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>vitres</object-name>
+    <object-name>vitreporte</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>grille</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>vitres</object-name>
+    <object-name>vitreporte</object-name>
+  </animation>
+
   <!-- Intérieur -->
   <model>
     <path>Aircraft/Sikorsky-S58/Models/Interior/interior.xml</path>
@@ -173,20 +193,25 @@
       <x-m>  8.984 </x-m>
       <y-m> -0.283 </y-m>
       <z-m>  2.046 </z-m>
-      <roll-deg>   90.000 </roll-deg>
-      <pitch-deg>   0.000 </pitch-deg>
-      <heading-deg> 0.000 </heading-deg>
+      <roll-deg>   90 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 00 </heading-deg>
     </offsets>
   </model>
 
   <!-- Compresssion -->
   <animation>
-    <type>rotate</type>
+    <name>TrainGauche</name>
     <object-name>roueG</object-name>
     <object-name>tubeG1</object-name>
     <object-name>tubeG2</object-name>
     <object-name>tubeG3</object-name>
     <object-name>tubeG4</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainGauche</object-name>
     <property>gear/gear[0]/compression-m</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> -4 </dep></entry>
@@ -198,19 +223,24 @@
       <z-m> -0.597 </z-m>
     </center>
     <axis>
-      <x> -1.000 </x>
-      <y>  0.000 </y>
-      <z>  0.000 </z>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <name>TrainDroit</name>
     <object-name>roueD</object-name>
     <object-name>tubeD1</object-name>
     <object-name>tubeD2</object-name>
     <object-name>tubeD3</object-name>
     <object-name>tubeD4</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainDroit</object-name>
     <property>gear/gear[1]/compression-m</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> -4 </dep></entry>
@@ -222,16 +252,21 @@
       <z-m> -0.597 </z-m>
     </center>
     <axis>
-      <x> 1.000 </x>
-      <y> 0.000 </y>
-      <z> 0.000 </z>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <name>TrainArriere</name>
     <object-name>roueA</object-name>
     <object-name>tubeA</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainArriere</object-name>
     <property>gear/gear[2]/compression-m</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> -4 </dep></entry>
@@ -243,18 +278,23 @@
       <z-m> -0.655 </z-m>
     </center>
     <axis>
-      <x>  0.000 </x>
-      <y> -1.000 </y>
-      <z>  0.000 </z>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 
   <!-- Animation porte et fenêtre -->
   <animation>
-    <type>translate</type>
+    <name>PorteGauche</name>
     <object-name>porte</object-name>
     <object-name>vitreporte</object-name>
     <object-name>poigneA</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>PorteGauche</object-name>
     <property>instrumentation/doors/passenger/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep> 0.0 </dep></entry>
@@ -270,10 +310,15 @@
   </animation>
 
   <animation>
-    <type>translate</type>
+    <name>PorteDroite</name>
     <object-name>windowD</object-name>
     <object-name>vitreD</object-name>
     <object-name>poigneD</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>PorteDroite</object-name>
     <property>instrumentation/doors/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep> 0.0 </dep></entry>

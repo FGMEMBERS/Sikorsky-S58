@@ -31,17 +31,17 @@
     <object-name>front</object-name>
     <object-name>needle</object-name>
     <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.028 </red>
       <green> 0.014 </green>
       <blue>  0.007 </blue>
-      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
     </emission>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>face</object-name>
-    <property>/instrumentation/adf/rotation-deg[0]</property>
+    <property>instrumentation/adf/rotation-deg[0]</property>
     <factor>-1</factor>
     <axis>
       <x> -1 </x>
@@ -53,7 +53,7 @@
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
-    <property>/instrumentation/adf/indicated-bearing-deg</property>
+    <property>instrumentation/adf/indicated-bearing-deg</property>
     <axis>
       <x> -1 </x>
       <y>  0 </y>

@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -10,7 +10,6 @@
     <object-name>boite</object-name>
     <object-name>boite2</object-name>
   </animation>
-
 
   <model>
     <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/ai/ai.xml</path>

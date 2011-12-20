@@ -10,6 +10,7 @@ data 11
 echappement
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 705
 -4.048378 -0.446468 0.639442
 -4.063829 -0.438656 0.642719
@@ -5621,6 +5622,7 @@ data 8
 fuselage
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 1127
 -2.003126 0.732248 -0.925672
 -2.003126 0.153773 -0.909004
@@ -14402,8 +14404,9 @@ name "grille"
 loc 0 0 -0
 data 6
 grille
-texture "../../../../../grille.png"
+texture "grille.png"
 texrep 1 1
+crease 30.000001
 numvert 60
 -3.524428 1.174928 -0.778398
 -4.05978 0.998824 -0.767832
@@ -14579,6 +14582,7 @@ data 5
 hstab
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 12
 7.403409 0.90349 -0.999446
 7.403409 0.90349 1.000554
@@ -14691,6 +14695,7 @@ data 3
 nez
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 65
 -4.9821 0.046021 0.000038
 -4.948225 0.273062 -0.258239
@@ -15168,6 +15173,7 @@ data 7
 poigneA
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 63
 -1.929795 0.139254 -0.892766
 -1.927861 0.139277 -0.896114
@@ -15709,6 +15715,7 @@ data 7
 poigneD
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 63
 -2.989836 1.26556 -0.788745
 -2.987902 1.264307 -0.785639
@@ -16250,6 +16257,7 @@ data 7
 poigneG
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 63
 -2.989836 1.26556 0.78874
 -2.987902 1.264307 0.785634
@@ -16791,6 +16799,7 @@ data 5
 porte
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 28
 -1.067887 0.227287 -0.911968
 -1.617257 0.227287 -0.910348
@@ -17085,6 +17094,7 @@ data 5
 roueA
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 802
 6.384511 -1.061345 0.048266
 6.408722 -1.090981 0.048266
@@ -23657,6 +23667,7 @@ data 5
 roueD
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 802
 -2.225294 -0.825463 -1.635096
 -2.184521 -0.875372 -1.635096
@@ -30229,6 +30240,7 @@ data 5
 roueG
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 802
 -2.225294 -0.825463 1.796605
 -2.184521 -0.875372 1.796605
@@ -36801,6 +36813,7 @@ data 4
 tail
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 386
 8.619514 2.303965 -0.104596
 8.619514 2.271432 -0.12309
@@ -40045,6 +40058,7 @@ data 10
 tourgrille
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 128
 -3.322237 0.912884 0.898813
 -3.524428 1.174927 0.779574
@@ -40855,6 +40869,7 @@ data 5
 trous
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 300
 -3.741705 1.456524 -0.19996
 -3.524427 1.174928 -0.779477
@@ -43113,6 +43128,7 @@ data 5
 tubeA
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 96
 5.361094 -0.629789 -0.003346
 5.361294 -0.629706 0.002547
@@ -43667,6 +43683,7 @@ data 6
 tubeD1
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 128
 -2.586448 -1.028929 -1.551871
 -2.591002 -1.028829 -1.555615
@@ -44477,6 +44494,7 @@ data 6
 tubeD2
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 257
 -2.811355 -0.869827 -1.209904
 -2.808209 -0.863624 -1.211379
@@ -46504,6 +46522,7 @@ data 6
 tubeD3
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 128
 -2.517875 -1.028929 -1.583622
 -2.522971 -1.028829 -1.580656
@@ -47314,6 +47333,7 @@ data 6
 tubeD4
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 257
 -2.275374 -0.869827 -1.253563
 -2.275662 -0.863624 -1.257025
@@ -49341,6 +49361,7 @@ data 6
 tubeD5
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 64
 -2.293264 -0.121745 -1.244232
 -2.287645 -0.120632 -1.250359
@@ -49639,6 +49660,7 @@ data 6
 tubeD6
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 128
 -2.271542 -0.020184 -1.205094
 -2.265401 -0.018968 -1.211791
@@ -50449,6 +50471,7 @@ data 6
 tubeD7
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 257
 -2.268395 -0.021903 -1.202298
 -2.261621 -0.020561 -1.209686
@@ -52476,6 +52499,7 @@ data 6
 tubeG1
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 128
 -2.586448 -1.028929 1.553108
 -2.591002 -1.028829 1.556852
@@ -53286,6 +53310,7 @@ data 6
 tubeG2
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 257
 -2.811355 -0.869827 1.210901
 -2.808209 -0.863624 1.212376
@@ -55313,6 +55338,7 @@ data 6
 tubeG3
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 128
 -2.517875 -1.028929 1.58482
 -2.522971 -1.028829 1.581855
@@ -56123,6 +56149,7 @@ data 6
 tubeG4
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 257
 -2.275374 -0.869827 1.254847
 -2.275662 -0.863624 1.258309
@@ -58150,6 +58177,7 @@ data 6
 tubeG5
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 64
 -2.293264 -0.121745 1.24534
 -2.287645 -0.120632 1.251467
@@ -58448,6 +58476,7 @@ data 6
 tubeG6
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 128
 -2.271542 -0.020184 1.206551
 -2.265401 -0.018968 1.213249
@@ -59258,6 +59287,7 @@ data 6
 tubeG7
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 257
 -2.268395 -0.021903 1.203331
 -2.261621 -0.020561 1.210718
@@ -61284,6 +61314,7 @@ loc 0 0 -0
 data 6
 vitreD
 texrep 1 1
+crease 30.000001
 numvert 16
 -2.082217 1.86423 -0.898341
 -2.535403 1.86423 -0.831085
@@ -61391,6 +61422,7 @@ loc 0 0 -0
 data 6
 vitreG
 texrep 1 1
+crease 30.000001
 numvert 16
 -2.082217 1.86423 0.898337
 -2.535403 1.86423 0.831081
@@ -61498,6 +61530,7 @@ loc 0 0 -0
 data 10
 vitreporte
 texrep 1 1
+crease 30.000001
 numvert 4
 -1.067887 0.777853 -0.936338
 -1.617257 0.777853 -0.936358
@@ -61518,6 +61551,7 @@ loc 0 0 -0
 data 6
 vitres
 texrep 1 1
+crease 30.000001
 numvert 106
 0.962771 0.227353 0.819589
 0.413401 0.227353 0.852515
@@ -62009,6 +62043,7 @@ data 7
 windowD
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 32
 -2.140359 1.160195 -0.919382
 -3.041894 1.186551 -0.861478
@@ -62295,6 +62330,7 @@ data 7
 windowG
 texture "texture.png"
 texrep 1 1
+crease 30.000001
 numvert 32
 -2.140359 1.160195 0.919378
 -3.041894 1.186551 0.861474

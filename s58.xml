@@ -1,7 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- 04-10-2010 : Updated by BARANGER Emmanuel with the Melchior's script -->
-<airplane mass="12000">
+<!-- Sikorsky S58  : Emmanuel BARANGER  2007
+        New version: Maik JUSTUS, Thomas REAGAN, Heiko SCHULZ (2008)
+        Updated by : Emmanuel BARANGER with the Melchior's script (04-10-2010)
+        Updated by : Slowman/Emmanuel BARANGER December 2013
+
+     source        : http://en.wikipedia.org/wiki/Sikorsky_H-34
+ 
+     Rotor diameter: 56 ft 0 in   ( 17.07 m  )
+     lenght        : 56 ft 8.5 in ( 17.28 m  )
+     height        : 15 ft 11 in  (  4.85 m  )
+     Empty weight  : 7900 lb      ( 3583 kg  )
+     Maximum speed : 107 kt       ( 198 km/h )
+     Engine        : 1 x Wright R-1820-84 radial engine (1525 hp)
+-->
+<airplane mass="7900">
 
   <approach speed="40" aoa="16">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
@@ -87,7 +100,7 @@
   </rotor>
 
   <!-- only the engine power below is a known good value -->
-  <rotorgear max-power-engine="1089"
+  <rotorgear max-power-engine="1525"
              max-power-rotor-brake="185"
              rotorgear-friction="3.7"
              engine-prop-factor="0.05"
@@ -125,7 +138,7 @@
   </hstab>
   
   <!-- left gear -->
-  <gear x="2.457" y="1.716" z="-1.33"
+  <gear x="2.45711" y="1.71626" z="-1.39708"
         compression="0.5"
         spring="20.2"
         damp="1.0"
@@ -137,7 +150,7 @@
   </gear>
 
   <!-- right gear -->
-  <gear x="2.457" y="-1.716" z="-1.33"
+  <gear x="2.45711" y="-1.71626" z="-1.39708"
         compression="0.5"
         spring="20.2"
         damp="1.0"
@@ -149,7 +162,7 @@
   </gear>
 
   <!-- tail gear -->
-  <gear x="-6.33" y="0" z="-1.30"
+  <gear x="-6.24685" y="0" z="-1.40104"
         compression="0.3"
         spring="3"
         damp="1.0"
@@ -164,8 +177,6 @@
   <tank x="3.18" y="-0.7" z="-0.31" capacity="75"/>
   <tank x="2.77" y="-0.5" z=" 0.00" capacity="75"/>
 
-  <ballast x=" 9.73" y="0.00" z="-5.0" mass="1400"/>
-
   <weight x="2.57"   y=" 0.33" z=" 1.2" mass-prop="/sim/weight[0]/weight-lb"/>
   <!-- pilot -->
   <weight x="2.57"   y="-0.33" z=" 1.2" mass-prop="/sim/weight[1]/weight-lb"/>
@@ -177,5 +188,21 @@
   <weight x="0.07"   y=" 0.00" z="-0.5" mass-prop="/sim/weight[5]/weight-lb"/>
   <!-- load -->
 
-</airplane>
+  <!-- hitch -->
+  <hitch name="aerotow"
+         x="-3.2" y="0.0" z="-1.5"
+         force-is-calculated-by-other="0">
+         <tow length="30"
+              weight-per-meter="0.035"
+              elastic-constant="9000"
+              break-force="50000"
+              mp-auto-connect-period="0.0"/>
+         <winch max-tow-length="100"
+                min-tow-length="30"
+                initial-tow-length="30"/>
+         <control-input axis="/controls/aerotow/find-aircraft" control="FINDAITOW"/>
+  </hitch>
 
+  <ballast x="5.5" y="0" z="-5" mass="1400"/>
+
+</airplane>

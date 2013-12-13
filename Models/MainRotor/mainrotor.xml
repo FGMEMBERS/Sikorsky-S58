@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -18,8 +18,6 @@
     <name>Blade1</name>
     <path>Aircraft/Sikorsky-S58/Models/MainRotor/blade1.xml</path>
     <offsets>
-      <x-m> 0.000 </x-m>
-      <y-m> 0.000 </y-m>
       <z-m> 0.070 </z-m>
     </offsets>
   </model>
@@ -28,8 +26,6 @@
     <name>Blade2</name>
     <path>Aircraft/Sikorsky-S58/Models/MainRotor/blade2.xml</path>
     <offsets>
-      <x-m> 0.000 </x-m>
-      <y-m> 0.000 </y-m>
       <z-m> 0.070 </z-m>
       <heading-deg> 90 </heading-deg>
     </offsets>
@@ -39,8 +35,6 @@
     <name>Blade3</name>
     <path>Aircraft/Sikorsky-S58/Models/MainRotor/blade3.xml</path>
     <offsets>
-      <x-m> 0.000 </x-m>
-      <y-m> 0.000 </y-m>
       <z-m> 0.070 </z-m>
       <heading-deg> 180 </heading-deg>
     </offsets>
@@ -50,8 +44,6 @@
     <name>Blade4</name>
     <path>Aircraft/Sikorsky-S58/Models/MainRotor/blade4.xml</path>
     <offsets>
-      <x-m> 0.000 </x-m>
-      <y-m> 0.000 </y-m>
       <z-m> 0.070 </z-m>
       <heading-deg> 270 </heading-deg>
     </offsets>
@@ -106,4 +98,3 @@
   </animation>
 
 </PropertyList>
-

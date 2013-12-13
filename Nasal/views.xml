@@ -1,41 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <chase-distance-m type="double" archive="y"> -30 </chase-distance-m>
 
   <view n="100">
-    <name>Co pilot Seat View</name>
+    <name>Side View</name>
     <internal archive="y">true</internal>
     <type>lookfrom</type>
     <config>
       <from-model type="bool">true</from-model>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-      <x-offset-m archive="y"> -0.447 </x-offset-m> <!--right-->
-      <y-offset-m archive="y">  1.725 </y-offset-m> <!--up-->
-      <z-offset-m archive="y"> -2.353 </z-offset-m> <!--back-->
+      <x-offset-m archive="y"> -1.447 </x-offset-m> <!--right-->
+      <y-offset-m archive="y">  1.5 </y-offset-m> <!--up-->
+      <z-offset-m archive="y"> 10.0 </z-offset-m> <!--back-->
+	  <pitch-offset-deg> -10 </pitch-offset-deg>
       <default-field-of-view-deg> 60 </default-field-of-view-deg>
     </config>
   </view>
 
   <view n="101">
-    <name>Passanger Seat View</name>
+    <name>Passenger View</name>
     <internal archive="y">true</internal>
     <type>lookfrom</type>
     <config>
       <from-model type="bool">true</from-model>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
       <dynamic-view type="bool">true</dynamic-view>
-      <x-offset-m archive="y"> 0.3 </x-offset-m> <!--Right-->
+      <x-offset-m archive="y">-0.2 </x-offset-m> <!--Right-->
       <y-offset-m archive="y"> 0.7 </y-offset-m> <!--Up-->
-      <z-offset-m archive="y"> 3.3 </z-offset-m> <!--Back-->
+      <z-offset-m archive="y"> 0.3 </z-offset-m> <!--Back-->
       <pitch-offset-deg> -10 </pitch-offset-deg>
+	  <heading-offset-deg>-45</heading-offset-deg>
       <default-field-of-view-deg> 60 </default-field-of-view-deg>
     </config>
   </view>
 
   <view n="102">
-    <name>Tail Camera View</name>
+    <name>Landing View</name>
     <type>lookfrom</type>
     <internal archive="y">true</internal>
     <config>
@@ -43,8 +45,8 @@
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
       <x-offset-m archive="y">  0.000 </x-offset-m> <!--Right-->
-      <y-offset-m archive="y">  2.658 </y-offset-m> <!--Up-->
-      <z-offset-m archive="y"> 12.988 </z-offset-m> <!--Back-->
+      <y-offset-m archive="y">  -0.8 </y-offset-m> <!--Up-->
+      <z-offset-m archive="y"> 9.0 </z-offset-m> <!--Back-->
       <pitch-offset-deg> -5 </pitch-offset-deg>
       <default-field-of-view-deg type="double"> 30 </default-field-of-view-deg>
     </config>

@@ -1,11 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!--
-************************************************************************
-S58 simulation config.
-
-************************************************************************
--->
 <PropertyList>
 
   <sim include="Nasal/views.xml">
@@ -20,7 +14,7 @@ S58 simulation config.
     <fuel-fraction>0.8</fuel-fraction>
 
     <rating>
-      <FDM type="int">     2 </FDM>
+      <FDM type="int">     3 </FDM>
       <systems type="int"> 1 </systems>
       <cockpit type="int"> 2 </cockpit>
       <model type="int">   4 </model>
@@ -115,6 +109,32 @@ S58 simulation config.
       </key>
     </help>
 
+    <hitches>
+      <!-- make sure some properties do exist, when the list for multiplayer transfer is defined -->
+      <!-- they need to be in the same value, as they are initilized in the FDM, to get the same -->
+      <!-- values after reset should fix this somehow                                            -->
+      <aerotow>
+        <tow>
+          <length type="float">30</length>
+          <elastic-constant type="float">10000</elastic-constant>
+          <weight-per-m-kg-m type="float">0.035</weight-per-m-kg-m>
+          <dist type="float">1</dist>
+          <connected-to-property-node type="bool"></connected-to-property-node>
+          <brake-force type="float">100000</brake-force>
+          <connected-to-ai-or-mp-callsign type ="string">*</connected-to-ai-or-mp-callsign>
+          <end-force-x type ="float">0</end-force-x>
+          <end-force-y type ="float">0</end-force-y>
+          <end-force-z type ="float">0</end-force-z>
+        </tow>
+        <speed-in-tow-direction type="float">0</speed-in-tow-direction>
+        <open type="bool">true</open>
+        <local-pos-x type="float">0</local-pos-x>
+        <local-pos-y type="float">0</local-pos-y>
+        <local-pos-z type="float">0</local-pos-z>
+        <is-slave type="bool">false</is-slave>
+      </aerotow>
+    </hitches>
+    
     <menubar include="Dialogs/s58-menu.xml"/>
 
   </sim>
@@ -132,6 +152,9 @@ S58 simulation config.
       <reltarget>1</reltarget>
       <maxreltorque>1</maxreltorque>
     </rotor>
+    <lighting>
+      <landing-lights type="bool">0</landing-lights>
+    </lighting>
   </controls>
 
   <instrumentation>
@@ -168,4 +191,3 @@ S58 simulation config.
   </nasal>
 
 </PropertyList>
-

@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?> 
 
 <PropertyList>
 
-  <path>adf.ac</path>
+  <path>trimelevator.ac</path>
 
   <animation>
     <object-name>fond</object-name>
     <object-name>face</object-name>
-    <object-name>front</object-name>
     <object-name>needle</object-name>
 
     <object-name>vitre</object-name>
@@ -24,43 +23,42 @@
     <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>vitre</object-name>
   </animation>
-
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitre</object-name>
+  </effect>
+  
   <animation>
     <type>material</type>
     <object-name>face</object-name>
-    <object-name>front</object-name>
     <object-name>needle</object-name>
     <emission>
       <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
-      <red>   0.028 </red>
-      <green> 0.014 </green>
-      <blue>  0.007 </blue>
-    </emission>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>face</object-name>
-    <property>instrumentation/adf/rotation-deg[0]</property>
-    <factor>-1</factor>
-    <axis>
-      <x> -1 </x>
-      <y>  0 </y>
-      <z>  0 </z>
-    </axis>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission> 
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>needle</object-name>
-    <property>instrumentation/adf/indicated-bearing-deg</property>
+    <property>controls/flight/elevator-trim</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep> -77 </dep></entry>
+      <entry><ind>  0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  1 </ind><dep>  77 </dep></entry>
+    </interpolation>
     <axis>
-      <x> -1 </x>
-      <y>  0 </y>
-      <z>  0 </z>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
     </axis>
-  </animation>
+  </animation>  
 
 </PropertyList>
-
-

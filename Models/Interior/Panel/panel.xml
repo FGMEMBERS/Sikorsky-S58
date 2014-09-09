@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <object-name>panel</object-name>
+    <object-name>cachepanel</object-name>
+    <object-name>boite</object-name>
+    <object-name>boite2</object-name>
+  </animation>
+  
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/C130-trim/trimaileron.xml</path>
+    <offsets>
+      <x-m> 0.372 </x-m>
+      <y-m> 0.358 </y-m>
+      <z-m> 0.233 </z-m>
+	  <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/C130-trim/trimaileron.xml</path>
+    <offsets>
+      <x-m>  0.372 </x-m>
+      <y-m> -0.358 </y-m>
+      <z-m>  0.233 </z-m>
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/C130-trim/trimelevator.xml</path>
+    <offsets>
+      <x-m> 0.372 </x-m>
+      <y-m> 0.408 </y-m>
+      <z-m> 0.233 </z-m>
+	  <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/C130-trim/trimelevator.xml</path>
+    <offsets>
+      <x-m>  0.372 </x-m>
+      <y-m> -0.408 </y-m>
+      <z-m>  0.233 </z-m>
+      <pitch-deg> -8 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/ch-ai/ai.xml</path>
+    <offsets>
+      <x-m> 0.455 </x-m>
+      <y-m> 0.392 </y-m>
+      <z-m> 0.113 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/ch-ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.455 </x-m>
+      <y-m> -0.392 </y-m>
+      <z-m>  0.113 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/hsi/hsi.xml</path>
+    <offsets>
+      <x-m> 0.397 </x-m>
+      <y-m> 0.525 </y-m>
+      <z-m> 0.060 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/hsi/hsi.xml</path>
+    <offsets>
+      <x-m>  0.397 </x-m>
+      <y-m> -0.525 </y-m>
+      <z-m>  0.060 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/altimeter/altimeter.xml</path>
+    <offsets>
+      <x-m> 0.388 </x-m>
+      <y-m> 0.251 </y-m>
+      <z-m> 0.092 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/altimeter/altimeter.xml</path>
+    <offsets>
+      <x-m>  0.388 </x-m>
+      <y-m> -0.251 </y-m>
+      <z-m>  0.092 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m> 0.378 </x-m>
+      <y-m> 0.590 </y-m>
+      <z-m> 0.184 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m>  0.378 </x-m>
+      <y-m> -0.590 </y-m>
+      <z-m>  0.184 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> 0.379 </x-m>
+      <y-m> 0.251 </y-m>
+      <z-m> 0.174 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.379 </x-m>
+      <y-m> -0.251 </y-m>
+      <z-m>  0.174 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> 0.381 </x-m>
+      <y-m> 0.506 </y-m>
+      <z-m> 0.174 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.381 </x-m>
+      <y-m> -0.506 </y-m>
+      <z-m>  0.174 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/ch-eng-trq/eng-trq.xml</path>
+    <offsets>
+      <x-m> 0.379 </x-m>
+      <y-m> 0.066 </y-m>
+      <z-m> 0.168 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/vor/vor.xml</path>
+    <offsets>
+      <x-m> 0.401 </x-m>
+      <y-m> 0.251 </y-m>
+      <z-m> 0.004 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/vor/vor.xml</path>
+    <offsets>
+      <x-m>  0.401 </x-m>
+      <y-m> -0.251 </y-m>
+      <z-m>  0.004 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/radar-alt/kra10a.xml</path>
+    <offsets>
+      <x-m> 0.382 </x-m>
+      <y-m> 0.163 </y-m>
+      <z-m> 0.177 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/radar-alt/kra10a.xml</path>
+    <offsets>
+      <x-m>  0.382 </x-m>
+      <y-m> -0.163 </y-m>
+      <z-m>  0.177 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/tach/tach.xml</path>
+    <offsets>
+      <x-m> 0.391 </x-m>
+      <y-m> 0.163 </y-m>
+      <z-m> 0.090 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/tach/tach.xml</path>
+    <offsets>
+      <x-m>  0.391 </x-m>
+      <y-m> -0.163 </y-m>
+      <z-m>  0.090 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m> 0.373 </x-m>
+      <y-m> 0.448 </y-m>
+      <z-m> 0.232 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m>  0.373 </x-m>
+      <y-m> -0.448 </y-m>
+      <z-m>  0.232 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

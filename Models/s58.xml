@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>s58.ac</path>
+
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/Sikorsky-S58/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
+    </load>
+
+    <unload>
+      livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
+    </unload>
+  </nasal>
+
+  <animation>
+    <object-name>fuselage</object-name>
+    <object-name>nez</object-name>
+    <object-name>tourgrille</object-name>
+    <object-name>hstab</object-name>
+    <object-name>tail</object-name>
+    <object-name>porte</object-name>
+    <object-name>windowG</object-name>
+    <object-name>windowD</object-name>
+    <object-name>poigneG</object-name>
+    <object-name>poigneD</object-name>
+    <object-name>poigneA</object-name>
+    <object-name>antenne</object-name>
+    <object-name>supportlampe</object-name>
+    <object-name>antennes</object-name>
+    <object-name>ajout</object-name>
+    
+    <object-name>echappement</object-name>
+    <object-name>marchepieds</object-name>
+    <object-name>cables</object-name>
+    <object-name>tubeG1</object-name>
+    <object-name>tubeG2</object-name>
+    <object-name>tubeG3</object-name>
+    <object-name>roueG</object-name>
+    <object-name>tubeD1</object-name>
+    <object-name>tubeD2</object-name>
+    <object-name>tubeD3</object-name>
+    <object-name>roueD</object-name>
+    <object-name>tubeA</object-name>
+    <object-name>tubeA1</object-name>
+    <object-name>tubeA2</object-name>
+    <object-name>roueA</object-name>
+
+    <!-- Transparence -->
+    <object-name>grille</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>vitres</object-name>
+    <object-name>vitreporte</object-name>
+    <object-name>lampe</object-name>
+    <object-name>lampetail</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>fuselage</object-name>
+    <object-name>nez</object-name>
+    <object-name>tourgrille</object-name>
+    <object-name>hstab</object-name>
+    <object-name>tail</object-name>
+    <object-name>porte</object-name>
+    <object-name>windowG</object-name>
+    <object-name>windowD</object-name>
+    <object-name>poigneG</object-name>
+    <object-name>poigneD</object-name>
+    <object-name>poigneA</object-name>
+    <object-name>antenne</object-name>
+    <object-name>supportlampe</object-name>
+    <object-name>antennes</object-name>
+    <object-name>ajout</object-name>
+    
+    <object-name>echappement</object-name>
+    <object-name>marchepieds</object-name>
+    <object-name>cables</object-name>
+    <object-name>tubeG1</object-name>
+    <object-name>tubeG2</object-name>
+    <object-name>tubeG3</object-name>
+    <object-name>roueG</object-name>
+    <object-name>tubeD1</object-name>    <object-name>marchepieds</object-name>
+    
+    <object-name>tubeD2</object-name>
+    <object-name>tubeD3</object-name>
+    <object-name>roueD</object-name>
+    <object-name>tubeA</object-name>
+    <object-name>tubeA1</object-name>
+    <object-name>tubeA2</object-name>
+    <object-name>roueA</object-name>
+    
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <object-name>fuselage</object-name>
+    <object-name>nez</object-name>
+    <object-name>tourgrille</object-name>
+    <object-name>hstab</object-name>
+    <object-name>tail</object-name>
+    <object-name>porte</object-name>
+    <object-name>windowG</object-name>
+    <object-name>windowD</object-name>
+    <object-name>poigneG</object-name>
+    <object-name>poigneD</object-name>
+    <object-name>poigneA</object-name>
+    <object-name>antenne</object-name>
+    <object-name>supportlampe</object-name>
+    <object-name>antennes</object-name>
+    <object-name>ajout</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-combined-deferred</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>fuselage</object-name>
+    <object-name>nez</object-name>
+    <object-name>tourgrille</object-name>
+    <object-name>hstab</object-name>
+    <object-name>tail</object-name>
+    <object-name>porte</object-name>
+    <object-name>windowG</object-name>
+    <object-name>windowD</object-name>
+    <object-name>poigneG</object-name>
+    <object-name>poigneD</object-name>
+    <object-name>poigneA</object-name>
+    <object-name>antenne</object-name>
+    <object-name>supportlampe</object-name>
+    <object-name>antennes</object-name>
+    <object-name>ajout</object-name>
+  </effect>
+  
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>vitres</object-name>
+    <object-name>vitreporte</object-name>
+    <object-name>lampe</object-name>
+    <object-name>lampetail</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>grille</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>vitres</object-name>
+    <object-name>vitreporte</object-name>
+    <object-name>lampe</object-name>
+    <object-name>lampetail</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>grille</object-name>
+    <object-name>vitreG</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>vitres</object-name>
+    <object-name>vitreporte</object-name>
+    <object-name>lampe</object-name>
+    <object-name>lampetail</object-name>
+  </effect>
+  
+  <!-- Une ombre pour OSG -->
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  2.967 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.150 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur -->
+  <model>
+    <name>Interieur</name>
+    <path>Aircraft/Sikorsky-S58/Models/Interior/interior.xml</path>
+  </model>
+
+  <!-- For Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>Interieur</object-name>
+  </animation>
+  
+  <!-- Cranking effects -->
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -4.04397 </x-m>
+      <y-m> -0.99079 </y-m>
+      <z-m> -0.63669 </z-m>
+      <pitch-deg> -5 </pitch-deg>
+      <heading-deg> -20 </heading-deg>
+    </offsets>
+  </model>
+  
+  <!-- Rotor principale -->
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/MainRotor/mainrotor.xml</path>
+    <offsets>
+      <x-m> -1.367 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  2.870 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Rotor de queue -->
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/TailRotor/tailrotor.xml</path>
+    <offsets>
+      <x-m>  8.984 </x-m>
+      <y-m> -0.283 </y-m>
+      <z-m>  2.046 </z-m>
+      <roll-deg> 90 </roll-deg>
+    </offsets>
+  </model>
+
+  <!-- Compresssion -->
+  <animation>
+    <name>TrainGauche</name>
+    <object-name>roueG</object-name>
+    <object-name>tubeG1</object-name>
+    <object-name>tubeG2</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainGauche</object-name>
+    <property>gear/gear[0]/compression-m</property>
+    <interpolation>
+      <entry><ind> 0.000 </ind><dep> -4 </dep></entry>
+      <entry><ind> 0.102 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.000 </ind><dep> 10 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -3.14178 </x-m>
+      <y-m> -0.86372 </y-m>
+      <z-m> -0.61382 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>tubeG2</object-name>
+    <property>gear/gear[0]/compression-m</property>
+    <interpolation>
+      <entry><ind> 0.000 </ind><dep>  3 </dep></entry>
+      <entry><ind> 0.102 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.000 </ind><dep> -9 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -2.47382 </x-m>
+      <y-m> -1.56318 </y-m>
+      <z-m> -0.92829 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>TrainDroit</name>
+    <object-name>roueD</object-name>
+    <object-name>tubeD1</object-name>
+    <object-name>tubeD2</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainDroit</object-name>
+    <property>gear/gear[1]/compression-m</property>
+    <interpolation>
+      <entry><ind> 0.000 </ind><dep> -4 </dep></entry>
+      <entry><ind> 0.102 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.000 </ind><dep> 10 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -3.14178 </x-m>
+      <y-m>  0.86372 </y-m>
+      <z-m> -0.61382 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>tubeD2</object-name>
+    <property>gear/gear[1]/compression-m</property>
+    <interpolation>
+      <entry><ind> 0.000 </ind><dep>  3 </dep></entry>
+      <entry><ind> 0.102 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.000 </ind><dep> -9 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -2.47382 </x-m>
+      <y-m>  1.56318 </y-m>
+      <z-m> -0.92829 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>TrainArriere</name>
+    <object-name>roueA</object-name>
+    <object-name>tubeA</object-name>
+    <object-name>tubeA1</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainArriere</object-name>
+    <property>gear/gear[2]/compression-m</property>
+    <interpolation>
+      <entry><ind> 0.000 </ind><dep> -4 </dep></entry>
+      <entry><ind> 0.193 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.000 </ind><dep> 10 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  5.34870 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.66956 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>AxesTrainArriere</name>
+    <object-name>tubeA1</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>AxesTrainArriere</object-name>
+    <property>gear/gear[2]/compression-m</property>
+    <interpolation>
+      <entry><ind> 0.000 </ind><dep>  2 </dep></entry>
+      <entry><ind> 0.193 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1.000 </ind><dep> -8 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  5.98648 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -1.07467 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Rotation des roues lors du roulage -->
+  <animation>
+    <type>spin</type>
+    <object-name>roueG</object-name>
+    <property>/gear/gear[0]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -2.45711 </x-m>
+      <y-m> -1.71626 </y-m>
+      <z-m> -1.05835 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>spin</type>
+    <object-name>roueD</object-name>
+    <property>/gear/gear[1]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -2.45711 </x-m>
+      <y-m>  1.71626 </y-m>
+      <z-m> -1.05835 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>spin</type>
+    <object-name>roueA</object-name>
+    <property>/gear/gear[2]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m>  6.24685 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -1.19963 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Animation porte et fenêtre -->
+  <animation>
+    <name>FenetrePilote</name>
+    <object-name>windowD</object-name>
+    <object-name>vitreD</object-name>
+    <object-name>poigneD</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>FenetrePilote</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>FenetrePilote</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 0.1 </dep></entry>
+      <entry><ind> 0.8 </ind><dep> 0.7 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 0.8 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1.00 </x>
+      <y> 0.05 </y>
+      <z> 0.00 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>PorteCote</name>
+    <object-name>porte</object-name>
+    <object-name>vitreporte</object-name>
+    <object-name>poigneA</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>PorteCote</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>PorteCote</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 0.1 </dep></entry>
+      <entry><ind> 0.8 </ind><dep> 1.1 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 1.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Ajout des effets lumineux -->
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/lights/beacon.xml</path>
+    <offsets>
+      <x-m> -0.83902 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  2.32957 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/lights/StrobeLight.xml</path>
+    <offsets>
+      <x-m> 9.49848 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 2.26305 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/lights/GreenLight.xml</path>
+    <offsets>
+      <x-m> -0.44073 </x-m>
+      <y-m> -0.94879 </y-m>
+      <z-m>  1.16707 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/lights/RedLight.xml</path>
+    <offsets>
+      <x-m> -0.44073 </x-m>
+      <y-m>  0.94879 </y-m>
+      <z-m>  1.16707 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Sikorsky-S58/Models/lights/light-cone.xml</path>
+    <offsets>
+      <x-m> -4.76390 </x-m>
+      <y-m> -0.22514 </y-m>
+      <z-m> -0.59950 </z-m>
+      <pitch-deg> -40 </pitch-deg>
+    </offsets>
+  </model>
+  
+</PropertyList>
